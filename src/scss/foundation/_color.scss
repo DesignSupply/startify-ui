@@ -1,0 +1,567 @@
+/* -------------------------------
+ *  palette color
+ * ---------------------------- */
+$palette-color-list: (
+  red: (
+    0: #fee2e2,
+    1: #fecaca,
+    2: #fca5a5,
+    3: #f87171,
+    4: #ef4444,
+    5: #dc2626,
+    6: #b91c1c,
+    7: #991b1b,
+    8: #7f1d1d,
+    9: #450a0a
+  ),
+  orange: (
+    0: #ffedd5,
+    1: #fed7aa,
+    2: #fdba74,
+    3: #fb923c,
+    4: #f97316,
+    5: #ea580c,
+    6: #c2410c,
+    7: #9a3412,
+    8: #7c2d12,
+    9: #431407
+  ),
+  orange-yellow: (
+    0: #fef3c7,
+    1: #fde68a,
+    2: #fcd34d,
+    3: #fbbf24,
+    4: #f59e0b,
+    5: #d97706,
+    6: #b45309,
+    7: #92400e,
+    8: #78350f,
+    9: #451a03
+  ),
+  yellow: (
+    0: #fef9c3,
+    1: #fef08a,
+    2: #fde047,
+    3: #facc15,
+    4: #eab308,
+    5: #ca8a04,
+    6: #a16207,
+    7: #854d0e,
+    8: #713f12,
+    9: #422006
+  ),
+  yellow-green: (
+    0: #ecfccb,
+    1: #d9f99d,
+    2: #bef264,
+    3: #a3e635,
+    4: #84cc16,
+    5: #65a30d,
+    6: #4d7c0f,
+    7: #3f6212,
+    8: #365314,
+    9: #1a2e05
+  ),
+  green: (
+    0: #dcfce7,
+    1: #bbf7d0,
+    2: #86efac,
+    3: #4ade80,
+    4: #22c55e,
+    5: #16a34a,
+    6: #15803d,
+    7: #166534,
+    8: #14532d,
+    9: #052e16
+  ),
+  teal: (
+    0: #ccfbf1,
+    1: #99f6e4,
+    2: #5eead4,
+    3: #2dd4bf,
+    4: #14b8a6,
+    5: #0d9488,
+    6: #0f766e,
+    7: #115e59,
+    8: #134e4a,
+    9: #042f2e
+  ),
+  cyan: (
+    0: #cffafe,
+    1: #a5f3fc,
+    2: #67e8f9,
+    3: #22d3ee,
+    4: #06b6d4,
+    5: #0891b2,
+    6: #0e7490,
+    7: #155e75,
+    8: #164e63,
+    9: #083344
+  ),
+  light-blue: (
+    0: #e0f2fe,
+    1: #bae6fd,
+    2: #7dd3fc,
+    3: #38bdf8,
+    4: #0ea5e9,
+    5: #0284c7,
+    6: #0369a1,
+    7: #075985,
+    8: #0c4a6e,
+    9: #082f49
+  ),
+  blue: (
+    0: #dbeafe,
+    1: #bfdbfe,
+    2: #93c5fd,
+    3: #60a5fa,
+    4: #3b82f6,
+    5: #2563eb,
+    6: #1d4ed8,
+    7: #1e40af,
+    8: #1e3a8a,
+    9: #172554
+  ),
+  blue-violet: (
+    0: #e0e7ff,
+    1: #c7d2fe,
+    2: #a5b4fc,
+    3: #818cf8,
+    4: #6366f1,
+    5: #4f46e5,
+    6: #4338ca,
+    7: #3730a3,
+    8: #312e81,
+    9: #1e1b4b
+  ),
+  violet: (
+    0: #ede9fe,
+    1: #ddd6fe,
+    2: #c4b5fd,
+    3: #a78bfa,
+    4: #8b5cf6,
+    5: #7c3aed,
+    6: #6d28d9,
+    7: #5b21b6,
+    8: #4c1d95,
+    9: #2e1065
+  ),
+  purple: (
+    0: #f3e8ff,
+    1: #e9d5ff,
+    2: #d8b4fe,
+    3: #c084fc,
+    4: #a855f7,
+    5: #9333ea,
+    6: #7e22ce,
+    7: #6b21a8,
+    8: #581c87,
+    9: #3b0764
+  ),
+  magenta: (
+    0: #fae8ff,
+    1: #f5d0fe,
+    2: #f0abfc,
+    3: #e879f9,
+    4: #d946ef,
+    5: #c026d3,
+    6: #a21caf,
+    7: #86198f,
+    8: #701a75,
+    9: #4a044e
+  ),
+  pink: (
+    0: #fce7f3,
+    1: #fbcfe8,
+    2: #f9a8d4,
+    3: #f472b6,
+    4: #ec4899,
+    5: #db2777,
+    6: #be185d,
+    7: #9d174d,
+    8: #831843,
+    9: #500724
+  ),
+  pink-red: (
+    0: #ffe4e6,
+    1: #fecdd3,
+    2: #fda4af,
+    3: #fb7185,
+    4: #f43f5e,
+    5: #e11d48,
+    6: #be123c,
+    7: #9f1239,
+    8: #881337,
+    9: #4c0519
+  )
+) !default;
+@function palette-color($palette-color-hue-key, $palette-color-tone-key) {
+  @return #{map-get(map-get($palette-color-list, $palette-color-hue-key), $palette-color-tone-key)};
+}
+
+/* -------------------------------
+ *  gray color
+ * ---------------------------- */
+$gray-color-list: (
+  cool: (
+    0: #f1f5f9,
+    1: #e2e8f0,
+    2: #cbd5e1,
+    3: #94a3b8,
+    4: #64748b,
+    5: #475569,
+    6: #334155,
+    7: #1e293b,
+    8: #0f172a,
+    9: #020617
+  ),
+  warm: (
+    0: #f5f5f4,
+    1: #e7e5e4,
+    2: #d6d3d1,
+    3: #a8a29e,
+    4: #78716c,
+    5: #57534e,
+    6: #44403c,
+    7: #292524,
+    8: #1c1917,
+    9: #0c0a09
+  ),
+  mono: (
+    0: #f4f4f4,
+    1: #e4e4e4,
+    2: #d4d4d4,
+    3: #a1a1a1,
+    4: #717171,
+    5: #525252,
+    6: #3f3f3f,
+    7: #272727,
+    8: #181818,
+    9: #090909
+  )
+) !default;
+@function gray-color($gray-color-hue-key, $gray-color-tone-key) {
+  @return #{map-get(map-get($gray-color-list, $gray-color-hue-key), $gray-color-tone-key)};
+}
+$color-white: #ffffff;
+$color-black: #000000;
+
+/* -------------------------------
+ *  status color
+ * ---------------------------- */
+$status-color-list: (
+  error: (
+    0: color-mix(in srgb, #ff0011 15%, white),
+    1: color-mix(in srgb, #ff0011 30%, white),
+    2: color-mix(in srgb, #ff0011 45%, white),
+    3: color-mix(in srgb, #ff0011 60%, white),
+    4: #ff0011,
+    5: color-mix(in srgb, #ff0011 75%, black),
+    6: color-mix(in srgb, #ff0011 60%, black),
+    7: color-mix(in srgb, #ff0011 45%, black),
+    8: color-mix(in srgb, #ff0011 30%, black),
+    9: color-mix(in srgb, #ff0011 15%, black)
+  ),
+  warning: (
+    0: color-mix(in srgb, #ffbb00 15%, white),
+    1: color-mix(in srgb, #ffbb00 30%, white),
+    2: color-mix(in srgb, #ffbb00 45%, white),
+    3: color-mix(in srgb, #ffbb00 60%, white),
+    4: #ffbb00,
+    5: color-mix(in srgb, #ffbb00 75%, black),
+    6: color-mix(in srgb, #ffbb00 60%, black),
+    7: color-mix(in srgb, #ffbb00 45%, black),
+    8: color-mix(in srgb, #ffbb00 30%, black),
+    9: color-mix(in srgb, #ffbb00 15%, black)
+  ),
+  success: (
+    0: color-mix(in srgb, #00cc44 15%, white),
+    1: color-mix(in srgb, #00cc44 30%, white),
+    2: color-mix(in srgb, #00cc44 45%, white),
+    3: color-mix(in srgb, #00cc44 60%, white),
+    4: #00cc44,
+    5: color-mix(in srgb, #00cc44 75%, black),
+    6: color-mix(in srgb, #00cc44 60%, black),
+    7: color-mix(in srgb, #00cc44 45%, black),
+    8: color-mix(in srgb, #00cc44 30%, black),
+    9: color-mix(in srgb, #00cc44 15%, black)
+  ),
+  info: (
+    0: color-mix(in srgb, #00ccff 15%, white),
+    1: color-mix(in srgb, #00ccff 30%, white),
+    2: color-mix(in srgb, #00ccff 45%, white),
+    3: color-mix(in srgb, #00ccff 60%, white),
+    4: #00ccff,
+    5: color-mix(in srgb, #00ccff 75%, black),
+    6: color-mix(in srgb, #00ccff 60%, black),
+    7: color-mix(in srgb, #00ccff 45%, black),
+    8: color-mix(in srgb, #00ccff 30%, black),
+    9: color-mix(in srgb, #00ccff 15%, black)
+  ),
+  negative: (
+    0: color-mix(in srgb, #aaaaaa 15%, white),
+    1: color-mix(in srgb, #aaaaaa 30%, white),
+    2: color-mix(in srgb, #aaaaaa 45%, white),
+    3: color-mix(in srgb, #aaaaaa 60%, white),
+    4: #aaaaaa,
+    5: color-mix(in srgb, #aaaaaa 75%, black),
+    6: color-mix(in srgb, #aaaaaa 60%, black),
+    7: color-mix(in srgb, #aaaaaa 45%, black),
+    8: color-mix(in srgb, #aaaaaa 30%, black),
+    9: color-mix(in srgb, #aaaaaa 15%, black)
+  )
+) !default;
+@function status-color($status-color-status-key, $status-color-tone-key) {
+  @return #{map-get(map-get($status-color-list, $status-color-status-key), $status-color-tone-key)};
+}
+
+/* -------------------------------
+ *  CSS variables
+ * ---------------------------- */
+:root {
+  // color scale
+  --su-palette-color__red--0: #{palette-color(red, 0)};
+  --su-palette-color__red--1: #{palette-color(red, 1)};
+  --su-palette-color__red--2: #{palette-color(red, 2)};
+  --su-palette-color__red--3: #{palette-color(red, 3)};
+  --su-palette-color__red--4: #{palette-color(red, 4)};
+  --su-palette-color__red--5: #{palette-color(red, 5)};
+  --su-palette-color__red--6: #{palette-color(red, 6)};
+  --su-palette-color__red--7: #{palette-color(red, 7)};
+  --su-palette-color__red--8: #{palette-color(red, 8)};
+  --su-palette-color__red--9: #{palette-color(red, 9)};
+  --su-palette-color__orange--0: #{palette-color(orange, 0)};
+  --su-palette-color__orange--1: #{palette-color(orange, 1)};
+  --su-palette-color__orange--2: #{palette-color(orange, 2)};
+  --su-palette-color__orange--3: #{palette-color(orange, 3)};
+  --su-palette-color__orange--4: #{palette-color(orange, 4)};
+  --su-palette-color__orange--5: #{palette-color(orange, 5)};
+  --su-palette-color__orange--6: #{palette-color(orange, 6)};
+  --su-palette-color__orange--7: #{palette-color(orange, 7)};
+  --su-palette-color__orange--8: #{palette-color(orange, 8)};
+  --su-palette-color__orange--9: #{palette-color(orange, 9)};
+  --su-palette-color__orange-yellow--0: #{palette-color(orange-yellow, 0)};
+  --su-palette-color__orange-yellow--1: #{palette-color(orange-yellow, 1)};
+  --su-palette-color__orange-yellow--2: #{palette-color(orange-yellow, 2)};
+  --su-palette-color__orange-yellow--3: #{palette-color(orange-yellow, 3)};
+  --su-palette-color__orange-yellow--4: #{palette-color(orange-yellow, 4)};
+  --su-palette-color__orange-yellow--5: #{palette-color(orange-yellow, 5)};
+  --su-palette-color__orange-yellow--6: #{palette-color(orange-yellow, 6)};
+  --su-palette-color__orange-yellow--7: #{palette-color(orange-yellow, 7)};
+  --su-palette-color__orange-yellow--8: #{palette-color(orange-yellow, 8)};
+  --su-palette-color__orange-yellow--9: #{palette-color(orange-yellow, 9)};
+  --su-palette-color__yellow--0: #{palette-color(yellow, 0)};
+  --su-palette-color__yellow--1: #{palette-color(yellow, 1)};
+  --su-palette-color__yellow--2: #{palette-color(yellow, 2)};
+  --su-palette-color__yellow--3: #{palette-color(yellow, 3)};
+  --su-palette-color__yellow--4: #{palette-color(yellow, 4)};
+  --su-palette-color__yellow--5: #{palette-color(yellow, 5)};
+  --su-palette-color__yellow--6: #{palette-color(yellow, 6)};
+  --su-palette-color__yellow--7: #{palette-color(yellow, 7)};
+  --su-palette-color__yellow--8: #{palette-color(yellow, 8)};
+  --su-palette-color__yellow--9: #{palette-color(yellow, 9)};
+  --su-palette-color__yellow-green--0: #{palette-color(yellow-green, 0)};
+  --su-palette-color__yellow-green--1: #{palette-color(yellow-green, 1)};
+  --su-palette-color__yellow-green--2: #{palette-color(yellow-green, 2)};
+  --su-palette-color__yellow-green--3: #{palette-color(yellow-green, 3)};
+  --su-palette-color__yellow-green--4: #{palette-color(yellow-green, 4)};
+  --su-palette-color__yellow-green--5: #{palette-color(yellow-green, 5)};
+  --su-palette-color__yellow-green--6: #{palette-color(yellow-green, 6)};
+  --su-palette-color__yellow-green--7: #{palette-color(yellow-green, 7)};
+  --su-palette-color__yellow-green--8: #{palette-color(yellow-green, 8)};
+  --su-palette-color__yellow-green--9: #{palette-color(yellow-green, 9)};
+  --su-palette-color__green--0: #{palette-color(green, 0)};
+  --su-palette-color__green--1: #{palette-color(green, 1)};
+  --su-palette-color__green--2: #{palette-color(green, 2)};
+  --su-palette-color__green--3: #{palette-color(green, 3)};
+  --su-palette-color__green--4: #{palette-color(green, 4)};
+  --su-palette-color__green--5: #{palette-color(green, 5)};
+  --su-palette-color__green--6: #{palette-color(green, 6)};
+  --su-palette-color__green--7: #{palette-color(green, 7)};
+  --su-palette-color__green--8: #{palette-color(green, 8)};
+  --su-palette-color__green--9: #{palette-color(green, 9)};
+  --su-palette-color__teal--0: #{palette-color(teal, 0)};
+  --su-palette-color__teal--1: #{palette-color(teal, 1)};
+  --su-palette-color__teal--2: #{palette-color(teal, 2)};
+  --su-palette-color__teal--3: #{palette-color(teal, 3)};
+  --su-palette-color__teal--4: #{palette-color(teal, 4)};
+  --su-palette-color__teal--5: #{palette-color(teal, 5)};
+  --su-palette-color__teal--6: #{palette-color(teal, 6)};
+  --su-palette-color__teal--7: #{palette-color(teal, 7)};
+  --su-palette-color__teal--8: #{palette-color(teal, 8)};
+  --su-palette-color__teal--9: #{palette-color(teal, 9)};
+  --su-palette-color__cyan--0: #{palette-color(cyan, 0)};
+  --su-palette-color__cyan--1: #{palette-color(cyan, 1)};
+  --su-palette-color__cyan--2: #{palette-color(cyan, 2)};
+  --su-palette-color__cyan--3: #{palette-color(cyan, 3)};
+  --su-palette-color__cyan--4: #{palette-color(cyan, 4)};
+  --su-palette-color__cyan--5: #{palette-color(cyan, 5)};
+  --su-palette-color__cyan--6: #{palette-color(cyan, 6)};
+  --su-palette-color__cyan--7: #{palette-color(cyan, 7)};
+  --su-palette-color__cyan--8: #{palette-color(cyan, 8)};
+  --su-palette-color__cyan--9: #{palette-color(cyan, 9)};
+  --su-palette-color__light-blue--0: #{palette-color(light-blue, 0)};
+  --su-palette-color__light-blue--1: #{palette-color(light-blue, 1)};
+  --su-palette-color__light-blue--2: #{palette-color(light-blue, 2)};
+  --su-palette-color__light-blue--3: #{palette-color(light-blue, 3)};
+  --su-palette-color__light-blue--4: #{palette-color(light-blue, 4)};
+  --su-palette-color__light-blue--5: #{palette-color(light-blue, 5)};
+  --su-palette-color__light-blue--6: #{palette-color(light-blue, 6)};
+  --su-palette-color__light-blue--7: #{palette-color(light-blue, 7)};
+  --su-palette-color__light-blue--8: #{palette-color(light-blue, 8)};
+  --su-palette-color__light-blue--9: #{palette-color(light-blue, 9)};
+  --su-palette-color__blue--0: #{palette-color(blue, 0)};
+  --su-palette-color__blue--1: #{palette-color(blue, 1)};
+  --su-palette-color__blue--2: #{palette-color(blue, 2)};
+  --su-palette-color__blue--3: #{palette-color(blue, 3)};
+  --su-palette-color__blue--4: #{palette-color(blue, 4)};
+  --su-palette-color__blue--5: #{palette-color(blue, 5)};
+  --su-palette-color__blue--6: #{palette-color(blue, 6)};
+  --su-palette-color__blue--7: #{palette-color(blue, 7)};
+  --su-palette-color__blue--8: #{palette-color(blue, 8)};
+  --su-palette-color__blue--9: #{palette-color(blue, 9)};
+  --su-palette-color__blue-violet--0: #{palette-color(blue-violet, 0)};
+  --su-palette-color__blue-violet--1: #{palette-color(blue-violet, 1)};
+  --su-palette-color__blue-violet--2: #{palette-color(blue-violet, 2)};
+  --su-palette-color__blue-violet--3: #{palette-color(blue-violet, 3)};
+  --su-palette-color__blue-violet--4: #{palette-color(blue-violet, 4)};
+  --su-palette-color__blue-violet--5: #{palette-color(blue-violet, 5)};
+  --su-palette-color__blue-violet--6: #{palette-color(blue-violet, 6)};
+  --su-palette-color__blue-violet--7: #{palette-color(blue-violet, 7)};
+  --su-palette-color__blue-violet--8: #{palette-color(blue-violet, 8)};
+  --su-palette-color__blue-violet--9: #{palette-color(blue-violet, 9)};
+  --su-palette-color__violet--0: #{palette-color(violet, 0)};
+  --su-palette-color__violet--1: #{palette-color(violet, 1)};
+  --su-palette-color__violet--2: #{palette-color(violet, 2)};
+  --su-palette-color__violet--3: #{palette-color(violet, 3)};
+  --su-palette-color__violet--4: #{palette-color(violet, 4)};
+  --su-palette-color__violet--5: #{palette-color(violet, 5)};
+  --su-palette-color__violet--6: #{palette-color(violet, 6)};
+  --su-palette-color__violet--7: #{palette-color(violet, 7)};
+  --su-palette-color__violet--8: #{palette-color(violet, 8)};
+  --su-palette-color__violet--9: #{palette-color(violet, 9)};
+  --su-palette-color__purple--0: #{palette-color(purple, 0)};
+  --su-palette-color__purple--1: #{palette-color(purple, 1)};
+  --su-palette-color__purple--2: #{palette-color(purple, 2)};
+  --su-palette-color__purple--3: #{palette-color(purple, 3)};
+  --su-palette-color__purple--4: #{palette-color(purple, 4)};
+  --su-palette-color__purple--5: #{palette-color(purple, 5)};
+  --su-palette-color__purple--6: #{palette-color(purple, 6)};
+  --su-palette-color__purple--7: #{palette-color(purple, 7)};
+  --su-palette-color__purple--8: #{palette-color(purple, 8)};
+  --su-palette-color__purple--9: #{palette-color(purple, 9)};
+  --su-palette-color__magenta--0: #{palette-color(magenta, 0)};
+  --su-palette-color__magenta--1: #{palette-color(magenta, 1)};
+  --su-palette-color__magenta--2: #{palette-color(magenta, 2)};
+  --su-palette-color__magenta--3: #{palette-color(magenta, 3)};
+  --su-palette-color__magenta--4: #{palette-color(magenta, 4)};
+  --su-palette-color__magenta--5: #{palette-color(magenta, 5)};
+  --su-palette-color__magenta--6: #{palette-color(magenta, 6)};
+  --su-palette-color__magenta--7: #{palette-color(magenta, 7)};
+  --su-palette-color__magenta--8: #{palette-color(magenta, 8)};
+  --su-palette-color__magenta--9: #{palette-color(magenta, 9)};
+  --su-palette-color__pink--0: #{palette-color(pink, 0)};
+  --su-palette-color__pink--1: #{palette-color(pink, 1)};
+  --su-palette-color__pink--2: #{palette-color(pink, 2)};
+  --su-palette-color__pink--3: #{palette-color(pink, 3)};
+  --su-palette-color__pink--4: #{palette-color(pink, 4)};
+  --su-palette-color__pink--5: #{palette-color(pink, 5)};
+  --su-palette-color__pink--6: #{palette-color(pink, 6)};
+  --su-palette-color__pink--7: #{palette-color(pink, 7)};
+  --su-palette-color__pink--8: #{palette-color(pink, 8)};
+  --su-palette-color__pink--9: #{palette-color(pink, 9)};
+  --su-palette-color__pink-red--0: #{palette-color(pink-red, 0)};
+  --su-palette-color__pink-red--1: #{palette-color(pink-red, 1)};
+  --su-palette-color__pink-red--2: #{palette-color(pink-red, 2)};
+  --su-palette-color__pink-red--3: #{palette-color(pink-red, 3)};
+  --su-palette-color__pink-red--4: #{palette-color(pink-red, 4)};
+  --su-palette-color__pink-red--5: #{palette-color(pink-red, 5)};
+  --su-palette-color__pink-red--6: #{palette-color(pink-red, 6)};
+  --su-palette-color__pink-red--7: #{palette-color(pink-red, 7)};
+  --su-palette-color__pink-red--8: #{palette-color(pink-red, 8)};
+  --su-palette-color__pink-red--9: #{palette-color(pink-red, 9)};
+  // gray scale
+  --su-gray-color__cool--0: #{gray-color(cool, 0)};
+  --su-gray-color__cool--1: #{gray-color(cool, 1)};
+  --su-gray-color__cool--2: #{gray-color(cool, 2)};
+  --su-gray-color__cool--3: #{gray-color(cool, 3)};
+  --su-gray-color__cool--4: #{gray-color(cool, 4)};
+  --su-gray-color__cool--5: #{gray-color(cool, 5)};
+  --su-gray-color__cool--6: #{gray-color(cool, 6)};
+  --su-gray-color__cool--7: #{gray-color(cool, 7)};
+  --su-gray-color__cool--8: #{gray-color(cool, 8)};
+  --su-gray-color__cool--9: #{gray-color(cool, 9)};
+  --su-gray-color__warm--0: #{gray-color(warm, 0)};
+  --su-gray-color__warm--1: #{gray-color(warm, 1)};
+  --su-gray-color__warm--2: #{gray-color(warm, 2)};
+  --su-gray-color__warm--3: #{gray-color(warm, 3)};
+  --su-gray-color__warm--4: #{gray-color(warm, 4)};
+  --su-gray-color__warm--5: #{gray-color(warm, 5)};
+  --su-gray-color__warm--6: #{gray-color(warm, 6)};
+  --su-gray-color__warm--7: #{gray-color(warm, 7)};
+  --su-gray-color__warm--8: #{gray-color(warm, 8)};
+  --su-gray-color__warm--9: #{gray-color(warm, 9)};
+  --su-gray-color__mono--0: #{gray-color(mono, 0)};
+  --su-gray-color__mono--1: #{gray-color(mono, 1)};
+  --su-gray-color__mono--2: #{gray-color(mono, 2)};
+  --su-gray-color__mono--3: #{gray-color(mono, 3)};
+  --su-gray-color__mono--4: #{gray-color(mono, 4)};
+  --su-gray-color__mono--5: #{gray-color(mono, 5)};
+  --su-gray-color__mono--6: #{gray-color(mono, 6)};
+  --su-gray-color__mono--7: #{gray-color(mono, 7)};
+  --su-gray-color__mono--8: #{gray-color(mono, 8)};
+  --su-gray-color__mono--9: #{gray-color(mono, 9)};
+  --su-color-white: #{$color-white};
+  --su-color-black: #{$color-black};
+  // status color
+  --su-status-color__error--0: #{status-color(error, 0)};
+  --su-status-color__error--1: #{status-color(error, 1)};
+  --su-status-color__error--2: #{status-color(error, 2)};
+  --su-status-color__error--3: #{status-color(error, 3)};
+  --su-status-color__error--4: #{status-color(error, 4)};
+  --su-status-color__error--5: #{status-color(error, 5)};
+  --su-status-color__error--6: #{status-color(error, 6)};
+  --su-status-color__error--7: #{status-color(error, 7)};
+  --su-status-color__error--8: #{status-color(error, 8)};
+  --su-status-color__error--9: #{status-color(error, 9)};
+  --su-status-color__warning--0: #{status-color(warning, 0)};
+  --su-status-color__warning--1: #{status-color(warning, 1)};
+  --su-status-color__warning--2: #{status-color(warning, 2)};
+  --su-status-color__warning--3: #{status-color(warning, 3)};
+  --su-status-color__warning--4: #{status-color(warning, 4)};
+  --su-status-color__warning--5: #{status-color(warning, 5)};
+  --su-status-color__warning--6: #{status-color(warning, 6)};
+  --su-status-color__warning--7: #{status-color(warning, 7)};
+  --su-status-color__warning--8: #{status-color(warning, 8)};
+  --su-status-color__warning--9: #{status-color(warning, 9)};
+  --su-status-color__success--0: #{status-color(success, 0)};
+  --su-status-color__success--1: #{status-color(success, 1)};
+  --su-status-color__success--2: #{status-color(success, 2)};
+  --su-status-color__success--3: #{status-color(success, 3)};
+  --su-status-color__success--4: #{status-color(success, 4)};
+  --su-status-color__success--5: #{status-color(success, 5)};
+  --su-status-color__success--6: #{status-color(success, 6)};
+  --su-status-color__success--7: #{status-color(success, 7)};
+  --su-status-color__success--8: #{status-color(success, 8)};
+  --su-status-color__success--9: #{status-color(success, 9)};
+  --su-status-color__info--0: #{status-color(info, 0)};
+  --su-status-color__info--1: #{status-color(info, 1)};
+  --su-status-color__info--2: #{status-color(info, 2)};
+  --su-status-color__info--3: #{status-color(info, 3)};
+  --su-status-color__info--4: #{status-color(info, 4)};
+  --su-status-color__info--5: #{status-color(info, 5)};
+  --su-status-color__info--6: #{status-color(info, 6)};
+  --su-status-color__info--7: #{status-color(info, 7)};
+  --su-status-color__info--8: #{status-color(info, 8)};
+  --su-status-color__info--9: #{status-color(info, 9)};
+  --su-status-color__negative--0: #{status-color(negative, 0)};
+  --su-status-color__negative--1: #{status-color(negative, 1)};
+  --su-status-color__negative--2: #{status-color(negative, 2)};
+  --su-status-color__negative--3: #{status-color(negative, 3)};
+  --su-status-color__negative--4: #{status-color(negative, 4)};
+  --su-status-color__negative--5: #{status-color(negative, 5)};
+  --su-status-color__negative--6: #{status-color(negative, 6)};
+  --su-status-color__negative--7: #{status-color(negative, 7)};
+  --su-status-color__negative--8: #{status-color(negative, 8)};
+  --su-status-color__negative--9: #{status-color(negative, 9)};
+}

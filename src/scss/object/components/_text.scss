@@ -1,0 +1,39 @@
+@use '../../foundation/import' as *;
+
+/* -------------------------------
+ *  CSS variables
+ * ---------------------------- */
+:root {
+  --su-color-text-highlight: #ffff00;
+}
+
+/* -------------------------------
+ *  text components
+ * ---------------------------- */
+.su-text-body {
+  font-size: var(--su-size-r);
+  font-weight: var(--su-font-medium);
+  line-height: 2;
+  @include media-query(mobile-l) {
+    font-size: var(--su-size-s);
+  }
+}
+.su-text-caption {
+  font-size: var(--su-size-s);
+  font-weight: var(--su-font-regular);
+  line-height: 1.8;
+  display: block;
+  @include media-query(mobile-l) {
+    font-size: var(--su-size-2s);
+  }
+}
+.su-text-body,
+.su-text-caption {
+  margin-block: 1em;
+  &:first-child {
+    margin-block-start: 0;
+  }
+}
+.su-text-highlight {
+  background: var(--su-color-text-highlight);
+}

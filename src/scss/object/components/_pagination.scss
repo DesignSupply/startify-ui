@@ -1,0 +1,55 @@
+@use '../../foundation/import' as *;
+
+/* -------------------------------
+ *  pagination links
+ * ---------------------------- */
+.su-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  column-gap: 1em;
+  row-gap: 0.5em;
+  line-height: 1;
+}
+
+/* -------------------------------
+ *  next previous links
+ * ---------------------------- */
+.su-next-previous-links {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  column-gap: 2em;
+  & > * {
+    flex: 1 1 0;
+    display: flex;
+    & > * {
+      position: relative;
+      &::before {
+        position: absolute;
+        top: 0;
+      }
+    }
+    &:nth-child(1) {
+      justify-content: flex-start;
+      & > * {
+        padding-left: 1.5em;
+        &::before {
+          content: '‹';
+          left: 0;
+        }
+      }
+    }
+    &:nth-child(2) {
+      justify-content: flex-end;
+      & > * {
+        padding-right: 1.5em;
+        &::before {
+          content: '›';
+          right: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+/* -------------------------------
+ *  CSS variables
+ * ---------------------------- */
+:root {
+  --su-color-list-marker: var(--su-default-font-color);
+  --su-color-list-number: inherit;
+  --su-color-list-border: var(--su-gray-color__mono--3);
+}
+
+/* -------------------------------
+ *  list
+ * ---------------------------- */
+.su-list-bullet {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  & > li {
+    padding: 0 0 0 1em;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0.5em;
+      height: 0.5em;
+      background: var(--su-color-list-marker);
+      left: 0;
+      top: calc(0.5lh - 0.25em);
+      border-radius: 100%;
+      display: block;
+    }
+  }
+  & .su-list-bullet,
+  & .su-list-ordered {
+    padding: 0 0 0 1em;
+  }
+}
+.su-list-ordered {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  counter-reset: number;
+  & > li {
+    padding: 0 0 0 1.25em;
+    position: relative;
+    counter-increment: number;
+    &::before {
+      content: counter(number) '.';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--su-color-list-number);
+    }
+  }
+  & .su-list-ordered,
+  & .su-list-bullet {
+    padding: 0 0 0 1em;
+  }
+}
+.su-list-items {
+  & > * {
+    padding: 0.5em 0.75em;
+    & + * {
+      position: relative;
+      padding: calc(0.5em + 1px) 0.75em 0.5em 0.75em;
+      &::before {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: var(--su-color-list-border);
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+}

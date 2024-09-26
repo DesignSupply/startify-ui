@@ -1,0 +1,134 @@
+/* -------------------------------
+ *  CSS variables
+ * ---------------------------- */
+:root {
+  --su-color-table-border: var(--su-gray-color__mono--3);
+  --su-color-table-fill: var(--su-gray-color__mono--2);
+  --su-color-table-stripe-odd: var(--su-gray-color__mono--0);
+  --su-color-table-stripe-even: var(--su-color-white);
+  --su-min-width-table-responsive: auto;
+}
+
+/* -------------------------------
+ *  table
+ * ---------------------------- */
+.su-table-border,
+.su-table-fill,
+.su-table-stripe {
+  border-collapse: collapse;
+  width: 100%;
+  caption {
+    margin-bottom: 0.5em;
+  }
+  th,
+  td {
+    padding: 0.5em;
+    text-align: left;
+    vertical-align: top;
+    &.su-table-cell {
+      &-top {
+        vertical-align: top;
+      }
+      &-middle {
+        vertical-align: middle;
+      }
+      &-bottom {
+        vertical-align: bottom;
+      }
+    }
+  }
+  &.su-table-size-small {
+    font-size: 0.8em;
+    th,
+    td {
+      padding: 0.25em;
+    }
+  }
+  &.su-table-size-large {
+    font-size: 1.2em;
+    th,
+    td {
+      padding: 0.75em;
+    }
+  }
+  &.su-table-column-fixed {
+    table-layout: fixed;
+  }
+}
+.su-table-border {
+  th,
+  td {
+    border-bottom: 1px solid var(--su-color-table-border);
+  }
+  thead {
+    tr {
+      &:last-child {
+        th,
+        td {
+          border-bottom-width: 2px;
+        }
+      }
+    }
+  }
+  &:has(tfoot) {
+    tbody {
+      tr {
+        &:last-child {
+          th,
+          td {
+            border-bottom-width: 2px;
+          }
+        }
+      }
+    }
+  }
+}
+.su-table-fill {
+  th {
+    background: var(--su-color-table-fill);
+  }
+  th,
+  td {
+    border: 1px solid var(--su-color-table-border);
+  }
+}
+.su-table-stripe {
+  tbody {
+    tr {
+      &:first-child {
+        th,
+        td {
+          border-top: 1px solid var(--su-color-table-border);
+        }
+      }
+      &:last-child {
+        th,
+        td {
+          border-bottom: 1px solid var(--su-color-table-border);
+        }
+      }
+      &:nth-child(odd) {
+        th,
+        td {
+          background: var(--su-color-table-stripe-odd);
+        }
+      }
+      &:nth-child(even) {
+        th,
+        td {
+          background: var(--su-color-table-stripe-even);
+        }
+      }
+    }
+  }
+}
+
+/* -------------------------------
+ *  table wrapper
+ * ---------------------------- */
+.su-table-wrap-responsive {
+  overflow-x: auto;
+  & > table {
+    min-width: var(--su-min-width-table-responsive);
+  }
+}

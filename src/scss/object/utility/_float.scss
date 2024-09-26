@@ -1,0 +1,26 @@
+/* -------------------------------
+ *  float
+ * ---------------------------- */
+.su-float-left {
+  float: left;
+}
+.su-float-right {
+  float: right;
+}
+.su-float-none {
+  float: none;
+}
+.su-float-clear {
+  clear: both;
+}
+
+/* -------------------------------
+ *  clearfix
+ * ---------------------------- */
+.su-clearfix {
+  &::after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+}

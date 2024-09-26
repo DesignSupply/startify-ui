@@ -1,0 +1,15 @@
+/* -------------------------------
+ *  hover mixin
+ * ---------------------------- */
+@mixin hover-style($disabled: false) {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+  @if $disabled {
+    &:hover {
+      @content;
+    }
+  }
+}

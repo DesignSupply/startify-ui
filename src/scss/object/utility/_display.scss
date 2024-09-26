@@ -1,0 +1,162 @@
+@use '../../foundation/import' as *;
+
+/* -------------------------------
+ *  display
+ * ---------------------------- */
+.su-inline {
+  display: inline;
+  &--mobile {
+    @include media-query(mobile-l) {
+      display: inline;
+    }
+  }
+  &--desktop {
+    @include media-query(mobile-l, min-width) {
+      display: inline;
+    }
+  }
+}
+.su-inline-block {
+  display: inline-block;
+  &--mobile {
+    @include media-query(mobile-l) {
+      display: inline-block;
+    }
+  }
+  &--desktop {
+    @include media-query(mobile-l, min-width) {
+      display: inline-block;
+    }
+  }
+}
+.su-block {
+  display: block;
+  &--mobile {
+    @include media-query(mobile-l) {
+      display: block;
+    }
+  }
+  &--desktop {
+    @include media-query(mobile-l, min-width) {
+      display: block;
+    }
+  }
+}
+.su-flex {
+  display: flex;
+  &--mobile {
+    @include media-query(mobile-l) {
+      display: flex;
+    }
+  }
+  &--desktop {
+    @include media-query(mobile-l, min-width) {
+      display: flex;
+    }
+  }
+}
+.su-inline-flex {
+  display: inline-flex;
+  &--mobile {
+    @include media-query(mobile-l) {
+      display: inline-flex;
+    }
+  }
+  &--desktop {
+    @include media-query(mobile-l, min-width) {
+      display: inline-flex;
+    }
+  }
+}
+.su-grid {
+  display: grid;
+  &--mobile {
+    @include media-query(mobile-l) {
+      display: grid;
+    }
+  }
+  &--desktop {
+    @include media-query(mobile-l, min-width) {
+      display: grid;
+    }
+  }
+}
+.su-none {
+  display: none;
+  &--mobile {
+    @include media-query(mobile-l) {
+      display: none;
+    }
+  }
+  &--desktop {
+    @include media-query(mobile-l, min-width) {
+      display: none;
+    }
+  }
+}
+
+/* -------------------------------
+ *  visibility
+ * ---------------------------- */
+.su-visible {
+  visibility: visible;
+}
+.su-hidden {
+  visibility: hidden;
+}
+
+/* -------------------------------
+ *  opacity
+ * ---------------------------- */
+.su-opacity-0 {
+  opacity: 0;
+}
+.su-opacity-10 {
+  opacity: 0.1;
+}
+.su-opacity-20 {
+  opacity: 0.2;
+}
+.su-opacity-30 {
+  opacity: 0.3;
+}
+.su-opacity-40 {
+  opacity: 0.4;
+}
+.su-opacity-50 {
+  opacity: 0.5;
+}
+.su-opacity-60 {
+  opacity: 0.6;
+}
+.su-opacity-70 {
+  opacity: 0.7;
+}
+.su-opacity-80 {
+  opacity: 0.8;
+}
+.su-opacity-90 {
+  opacity: 0.9;
+}
+.su-opacity-100 {
+  opacity: 1;
+}
+
+/* -------------------------------
+ *  overflow
+ * ---------------------------- */
+.su-overflow-visible {
+  overflow: visible;
+}
+.su-overflow-hidden {
+  overflow: hidden;
+}
+.su-overflow-clip {
+  overflow: clip;
+}
+.su-overflow-scroll {
+  overflow: scroll;
+}
+.su-overflow-auto {
+  overflow: scroll;
+}

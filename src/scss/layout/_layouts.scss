@@ -1,0 +1,24 @@
+@use '../foundation/import' as *;
+
+/* -------------------------------
+ *  base layout
+ * ---------------------------- */
+.su-layout {
+  height: auto;
+  min-height: 100dvh;
+  display: grid;
+  grid-template:
+    'header' auto
+    'main' 1fr
+    'footer' auto
+    / 100%;
+}
+.su-header {
+  grid-area: header;
+}
+.su-footer {
+  grid-area: footer;
+}
+.su-main {
+  grid-area: main;
+}

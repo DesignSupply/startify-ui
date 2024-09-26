@@ -1,0 +1,45 @@
+/* -------------------------------
+ *  screen size & breakpoint
+ * ---------------------------- */
+$screen-desktop-l: 1440 !default;
+$screen-desktop-m: 1280 !default;
+$screen-desktop-s: 992 !default;
+$screen-mobile-l: 768 !default;
+$screen-mobile-m: 576 !default;
+$screen-mobile-s: 400 !default;
+$breakpoint-list: (
+  mobile-s: #{$screen-mobile-s},
+  mobile-m: #{$screen-mobile-m},
+  mobile-l: #{$screen-mobile-l},
+  desktop-s: #{$screen-desktop-s},
+  desktop-m: #{$screen-desktop-m},
+  desktop-l: #{$screen-desktop-l}
+) !default;
+
+/* -------------------------------
+ *  media query mixin
+ * ---------------------------- */
+@mixin media-query($breakpoint-key: 'mobile-l', $rule: max-width) {
+  @if $rule == max-width {
+    @media (width <= #{map-get($breakpoint-list, $breakpoint-key)}px) {
+      @content;
+    }
+  } @else if $rule == min-width {
+    @media (calc(#{map-get($breakpoint-list, $breakpoint-key)}px + 1px) <= width) {
+      @content;
+    }
+  }
+}
+
+/* -------------------------------
+ *  CSS variables
+ * ---------------------------- */
+:root {
+  // screen size & breakpoint
+  --su-screen-desktop-l: #{$screen-desktop-l};
+  --su-screen-desktop-m: #{$screen-desktop-m};
+  --su-screen-desktop-s: #{$screen-desktop-s};
+  --su-screen-mobile-l: #{$screen-mobile-l};
+  --su-screen-mobile-m: #{$screen-mobile-m};
+  --su-screen-mobile-s: #{$screen-mobile-s};
+}

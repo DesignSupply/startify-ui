@@ -1,0 +1,129 @@
+/* -------------------------------
+ *  dropshadow box
+ * ---------------------------- */
+.su-shadow-box {
+  box-shadow: 0 3px 10px 0 rgb(0 0 0 / 0.3);
+  &-0,
+  &-none {
+    box-shadow: 0 0 2px 1px rgb(0 0 0 / 0.4);
+  }
+  &-1,
+  &-low {
+    box-shadow: 0 1px 6px 0 rgb(0 0 0 / 0.35);
+  }
+  &-2,
+  &-medium {
+    box-shadow: 0 3px 10px 0 rgb(0 0 0 / 0.3);
+  }
+  &-3,
+  &-high {
+    box-shadow: 0 5px 14px 0 rgb(0 0 0 / 0.25);
+  }
+  &-4,
+  &-highest {
+    box-shadow: 0 7px 18px 0 rgb(0 0 0 / 0.2);
+  }
+  &-right-bottom {
+    box-shadow: 3px 3px 10px 0 rgb(0 0 0 / 0.3);
+    &-1,
+    &-low {
+      box-shadow: 1px 1px 6px 0 rgb(0 0 0 / 0.35);
+    }
+    &-2,
+    &-medium {
+      box-shadow: 3px 3px 10px 0 rgb(0 0 0 / 0.3);
+    }
+    &-3,
+    &-high {
+      box-shadow: 5px 5px 14px 0 rgb(0 0 0 / 0.25);
+    }
+    &-4,
+    &-highest {
+      box-shadow: 7px 7px 18px 0 rgb(0 0 0 / 0.2);
+    }
+  }
+  &-left-bottom {
+    box-shadow: -3px 3px 10px 0 rgb(0 0 0 / 0.3);
+    &-1,
+    &-low {
+      box-shadow: -1px 1px 6px 0 rgb(0 0 0 / 0.35);
+    }
+    &-2,
+    &-medium {
+      box-shadow: -3px 3px 10px 0 rgb(0 0 0 / 0.3);
+    }
+    &-3,
+    &-high {
+      box-shadow: -5px 5px 14px 0 rgb(0 0 0 / 0.25);
+    }
+    &-4,
+    &-highest {
+      box-shadow: -7px 7px 18px 0 rgb(0 0 0 / 0.2);
+    }
+  }
+}
+
+/* -------------------------------
+ *  dropshadow text
+ * ---------------------------- */
+.su-shadow-text {
+  text-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+  &-0,
+  &-none {
+    text-shadow: 0 0 2px rgb(0 0 0 / 0.4);
+  }
+  &-1,
+  &-low {
+    text-shadow: 0 1px 6px rgb(0 0 0 / 0.35);
+  }
+  &-2,
+  &-medium {
+    text-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+  }
+  &-3,
+  &-high {
+    text-shadow: 0 5px 14px rgb(0 0 0 / 0.25);
+  }
+  &-4,
+  &-highest {
+    text-shadow: 0 7px 18px rgb(0 0 0 / 0.2);
+  }
+  &-right-bottom {
+    text-shadow: 3px 3px 10px rgb(0 0 0 / 0.3);
+    &-1,
+    &-low {
+      text-shadow: 1px 1px 6px rgb(0 0 0 / 0.35);
+    }
+    &-2,
+    &-medium {
+      text-shadow: 3px 3px 10px rgb(0 0 0 / 0.3);
+    }
+    &-3,
+    &-high {
+      text-shadow: 5px 5px 14px rgb(0 0 0 / 0.25);
+    }
+    &-4,
+    &-highest {
+      text-shadow: 7px 7px 18px rgb(0 0 0 / 0.2);
+    }
+  }
+  &-left-bottom {
+    text-shadow: -3px 3px 10px rgb(0 0 0 / 0.3);
+    &-1,
+    &-low {
+      text-shadow: -1px 1px 6px rgb(0 0 0 / 0.35);
+    }
+    &-2,
+    &-medium {
+      text-shadow: -3px 3px 10px rgb(0 0 0 / 0.3);
+    }
+    &-3,
+    &-high {
+      text-shadow: -5px 5px 14px rgb(0 0 0 / 0.25);
+    }
+    &-4,
+    &-highest {
+      text-shadow: -7px 7px 18px rgb(0 0 0 / 0.2);
+    }
+  }
+}
