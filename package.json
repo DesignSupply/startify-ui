@@ -2,7 +2,7 @@
   "name": "@designsupply/startify-ui",
   "version": "0.1.1",
   "description": "The CSS framework for efficiently developing the UI design of websites and applications.",
-  "main": "startify-ui.min.js",
+  "main": "index.js",
   "scripts": {
     "build": "npm run build-js && npm run build-css",
     "build-js": "webpack",

@@ -1,3 +1,9 @@
+/*
+ * Startify-UI
+ * This project is licensed under the MIT License.
+ * (c) 2024-present Shinya Ogawa
+*/
+
 // accordion components
 const accordionComponents = document.querySelectorAll('.su-accordion');
 const closingAccordion = (detailElement: HTMLElement) => {
