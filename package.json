@@ -4,7 +4,9 @@
   "description": "The CSS framework for efficiently developing the UI design of websites and applications.",
   "main": "index.js",
   "scripts": {
-    "build": "sass --style compressed src/scss/startify-ui.scss:dist/startify-ui.min.css",
+    "build": "npm run build-js && npm run build-css",
+    "build-js": "webpack",
+    "build-css": "sass --style compressed src/scss/startify-ui.scss:dist/startify-ui.min.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,8 +21,12 @@
   "bugs": {
     "url": "https://github.com/DesignSupply/startify-ui/issues"
   },
-  "homepage": "https://github.com/DesignSupply/startify-ui#readme",
+  "homepage": "https://lab.designsupply-web.com/startify-ui/",
   "devDependencies": {
-    "sass": "^1.79.3"
+    "sass": "^1.79.3",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.6.2",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
   }
 }

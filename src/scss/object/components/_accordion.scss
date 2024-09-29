@@ -1,0 +1,73 @@
+/* -------------------------------
+ *  CSS variables
+ * ---------------------------- */
+:root {
+  --su-color-accordion-border: var(--su-gray-color__mono--4);
+  --su-size-accordion-radius: var(--su-size-5s);
+  --su-color-accordion-detail-bg: var(--su-gray-color__mono--0);
+}
+
+/* -------------------------------
+ *  accordion
+ * ---------------------------- */
+.su-accordion {
+  border: 1px solid var(--su-color-accordion-border);
+  border-radius: var(--su-size-accordion-radius);
+  overflow: hidden;
+  &-summary {
+    font-weight: bold;
+    display: block;
+    padding-block: 1em;
+    padding-inline: 1em;
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+  &-detail {
+    padding: 1em;
+    background: var(--su-color-accordion-detail-bg);
+  }
+  &.su-accordion-add-icon {
+    &-left,
+    &-right {
+      summary {
+        position: relative;
+        padding-block: 1em;
+        &::before {
+          content: "\e915";
+          position: absolute;
+          font-family: "startify-ui icons";
+          top: 1em;
+        }
+      }
+    }
+    &-left {
+      summary {
+        padding-inline: 2.5em 1em;
+        &::before {
+          left: 1em;
+        }
+      }
+    }
+    &-right {
+      summary {
+        padding-inline: 1em 2.5em;
+        &::before {
+          right: 1em;
+        }
+      }
+    }
+  }
+  &[open] {
+    &.su-accordion-add-icon {
+      &-left,
+      &-right {
+        summary {
+          &::before {
+            content: "\e914";
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+@use '../../foundation/import' as *;
+
+/* -------------------------------
+ *  CSS variables
+ * ---------------------------- */
+:root {
+  --su-color-text-input-border: var(--su-gray-color__mono--4);
+  --su-color-text-input-data: var(--su-default-font-color);
+  --su-color-text-input-placeholder: var(--su-gray-color__mono--2);
+  --su-color-text-input-icon: var(--su-gray-color__mono--3);
+  --su-round-text-input-corner: var(--su-size-5s);
+  --su-min-text-area-row: 4;
+  --su-max-text-area-row: 8;
+}
+
+/* -------------------------------
+ *  text input (single)
+ * ---------------------------- */
+.su-form-text-input {
+  border: 1px solid var(--su-color-text-input-border);
+  border-radius: var(--su-round-text-input-corner);
+  padding: 0.5em 1em;
+  color: var(--su-color-text-input-data);
+  max-width: 100%;
+  display: inline-block;
+  &:has(input:focus-visible) {
+    outline: 1px solid var(--su-color-text-input-border);
+  }
+  input {
+    font-size: inherit;
+    max-width: 100%;
+    &:focus-visible {
+      outline: none;
+    }
+    &::placeholder {
+      color: var(--su-color-text-input-placeholder);
+    }
+    // default ui hidden
+    &::-webkit-inner-spin-button {
+      display: none;
+    }
+    &::-webkit-calendar-picker-indicator {
+      display: none;
+    }
+  }
+  // default ui show
+  &.su-form-text-input-show-ui {
+    input {
+      &::-webkit-inner-spin-button {
+        display: inline-block;
+      }
+      &::-webkit-calendar-picker-indicator {
+        display: inline-block;
+      }
+    }
+  }
+  &.su-form-text-input-add-icon {
+    &-email,
+    &-tel,
+    &-url,
+    &-date,
+    &-time,
+    &-password {
+      padding: 0.5em 1em 0.5em 2.75em;
+      position: relative;
+      &::before {
+        position: absolute;
+        left: 0.5em;
+        top: calc(50% - 0.5lh);
+        width: 1lh;
+        height: 1lh;
+        font-family: "startify-ui icons";
+        color: var(--su-color-text-input-icon);
+        line-height: 1;
+        font-size: calc(1em * 1.44);
+      }
+    }
+    &-email {
+      &::before {
+        content: "\e907";
+      }
+    }
+    &-tel {
+      &::before {
+        content: "\e90c";
+      }
+    }
+    &-url {
+      &::before {
+        content: "\e90a";
+      }
+    }
+    &-date {
+      &::before {
+        content: "\e903";
+      }
+    }
+    &-time {
+      &::before {
+        content: "\e910";
+      }
+    }
+    &-password {
+      &::before {
+        content: "\e90b";
+      }
+    }
+  }
+}
+
+/* -------------------------------
+ *  text input (mulch)
+ * ---------------------------- */
+.su-form-text-area {
+  border: 1px solid var(--su-color-text-input-border);
+  border-radius: var(--su-round-text-input-corner);
+  padding: 0.5em 1em;
+  color: var(--su-color-text-input-data);
+  max-width: 100%;
+  display: inline-block;
+  field-sizing: content;
+  min-height: calc(var(--su-min-text-area-row) * 1lh);
+  max-height: calc(var(--su-max-text-area-row) * 1lh);
+  resize: vertical;
+  &:focus-visible {
+    outline: 1px solid var(--su-color-text-input-border);
+  }
+  &::placeholder {
+    color: var(--su-color-text-input-placeholder);
+  }
+}

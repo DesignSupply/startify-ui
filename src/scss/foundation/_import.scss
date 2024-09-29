@@ -1,6 +1,7 @@
 /* -------------------------------
  *  file import
  * ---------------------------- */
+@forward 'reset';
 @forward 'color';
 @forward 'scale';
 @forward 'typography';
@@ -8,4 +9,3 @@
 @forward 'mediaquery';
 @forward 'mixin';
 @forward 'animation';
-@forward 'reset';

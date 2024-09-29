@@ -1,13 +1,33 @@
+/*
+ * Startify-UI
+ * This project is licensed under the MIT License.
+ * (c) 2024-present Shinya Ogawa
+*/
+
+/* -------------------------------
+ *  startify-ui
+ *  file import (Foundation)
+ * ---------------------------- */
 @use 'foundation/import';
+
+/* -------------------------------
+ *  startify-ui
+ *  file import (Layout)
+ * ---------------------------- */
 @use 'layout/layouts';
 @use 'layout/modules';
+
+/* -------------------------------
+ *  startify-ui
+ *  file import (Object_Component)
+ * ---------------------------- */
 @use 'object/components/accordion';
 @use 'object/components/alert';
 @use 'object/components/breadcrumb';
 @use 'object/components/button';
 @use 'object/components/code';
 @use 'object/components/datetime';
-@use 'object/components/form';
+@use 'object/components/form-text-input';
 @use 'object/components/heading';
 @use 'object/components/image';
 @use 'object/components/label';
@@ -18,6 +38,11 @@
 @use 'object/components/quote';
 @use 'object/components/table';
 @use 'object/components/text';
+
+/* -------------------------------
+ *  startify-ui
+ *  file import (Object_Utility)
+ * ---------------------------- */
 @use 'object/utility/alignment';
 @use 'object/utility/background';
 @use 'object/utility/border';
