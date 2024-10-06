@@ -8,7 +8,7 @@
   --su-color-text-input-data: var(--su-default-font-color);
   --su-color-text-input-placeholder: var(--su-gray-color__mono--2);
   --su-color-text-input-icon: var(--su-gray-color__mono--3);
-  --su-round-text-input-corner: var(--su-size-5s);
+  --su-size-text-input-radius: var(--su-size-5s);
   --su-min-text-area-row: 4;
   --su-max-text-area-row: 8;
 }
@@ -18,7 +18,7 @@
  * ---------------------------- */
 .su-form-text-input {
   border: 1px solid var(--su-color-text-input-border);
-  border-radius: var(--su-round-text-input-corner);
+  border-radius: var(--su-size-text-input-radius);
   padding: 0.5em 1em;
   color: var(--su-color-text-input-data);
   max-width: 100%;
@@ -69,7 +69,7 @@
         top: calc(50% - 0.5lh);
         width: 1lh;
         height: 1lh;
-        font-family: "startify-ui icons";
+        font-family: 'startify-ui icons';
         color: var(--su-color-text-input-icon);
         line-height: 1;
         font-size: calc(1em * 1.44);
@@ -77,32 +77,32 @@
     }
     &-email {
       &::before {
-        content: "\e907";
+        content: '\e907';
       }
     }
     &-tel {
       &::before {
-        content: "\e90c";
+        content: '\e90c';
       }
     }
     &-url {
       &::before {
-        content: "\e90a";
+        content: '\e90a';
       }
     }
     &-date {
       &::before {
-        content: "\e903";
+        content: '\e903';
       }
     }
     &-time {
       &::before {
-        content: "\e910";
+        content: '\e910';
       }
     }
     &-password {
       &::before {
-        content: "\e90b";
+        content: '\e90b';
       }
     }
   }
@@ -113,7 +113,7 @@
  * ---------------------------- */
 .su-form-text-area {
   border: 1px solid var(--su-color-text-input-border);
-  border-radius: var(--su-round-text-input-corner);
+  border-radius: var(--su-size-text-input-radius);
   padding: 0.5em 1em;
   color: var(--su-color-text-input-data);
   max-width: 100%;

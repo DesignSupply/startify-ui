@@ -25,7 +25,7 @@
         top: 0;
         width: 1lh;
         height: 1lh;
-        font-family: "startify-ui icons";
+        font-family: 'startify-ui icons';
         color: var(--su-color-icon-datetime);
         line-height: 1;
         font-size: calc(1.25em * 1.44);
@@ -33,12 +33,12 @@
     }
     &-date {
       &::before {
-        content: "\e903";
+        content: '\e903';
       }
     }
     &-time {
       &::before {
-        content: "\e910";
+        content: '\e910';
       }
     }
   }

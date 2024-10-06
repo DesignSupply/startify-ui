@@ -34,9 +34,9 @@
         position: relative;
         padding-block: 1em;
         &::before {
-          content: "\e915";
+          content: '\e915';
           position: absolute;
-          font-family: "startify-ui icons";
+          font-family: 'startify-ui icons';
           top: 1em;
         }
       }
@@ -64,7 +64,7 @@
       &-right {
         summary {
           &::before {
-            content: "\e914";
+            content: '\e914';
           }
         }
       }

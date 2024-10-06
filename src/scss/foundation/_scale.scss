@@ -54,6 +54,30 @@ $layer-order-loading: 500 !default;
 $layer-order-infinity: calc(infinity) !default;
 
 /* -------------------------------
+ *  shadow elevation
+ * ---------------------------- */
+$shadow-elevation-offset-0: 0 !default;
+$shadow-elevation-offset-1: 1px !default;
+$shadow-elevation-offset-2: 3px !default;
+$shadow-elevation-offset-3: 5px !default;
+$shadow-elevation-offset-4: 7px !default;
+$shadow-elevation-blur-0: 2px !default;
+$shadow-elevation-blur-1: 6px !default;
+$shadow-elevation-blur-2: 10px !default;
+$shadow-elevation-blur-3: 14px !default;
+$shadow-elevation-blur-4: 18px !default;
+$shadow-elevation-spread-0: 1px !default;
+$shadow-elevation-spread-1: 0 !default;
+$shadow-elevation-spread-2: 0 !default;
+$shadow-elevation-spread-3: 0 !default;
+$shadow-elevation-spread-4: 0 !default;
+$shadow-elevation-color-0: rgb(0 0 0 / 0.4) !default;
+$shadow-elevation-color-1: rgb(0 0 0 / 0.35) !default;
+$shadow-elevation-color-2: rgb(0 0 0 / 0.3) !default;
+$shadow-elevation-color-3: rgb(0 0 0 / 0.25) !default;
+$shadow-elevation-color-4: rgb(0 0 0 / 0.2) !default;
+
+/* -------------------------------
  *  CSS variables
  * ---------------------------- */
 :root {
@@ -96,6 +120,27 @@ $layer-order-infinity: calc(infinity) !default;
   --su-size-content: #{$size-content};
   --su-size-screen-w: #{$size-screen-w};
   --su-size-screen-h: #{$size-screen-h};
+  // shadow elevation
+  --su-shadow-elevation-offset-0: #{$shadow-elevation-offset-0};
+  --su-shadow-elevation-offset-1: #{$shadow-elevation-offset-1};
+  --su-shadow-elevation-offset-2: #{$shadow-elevation-offset-2};
+  --su-shadow-elevation-offset-3: #{$shadow-elevation-offset-3};
+  --su-shadow-elevation-offset-4: #{$shadow-elevation-offset-4};
+  --su-shadow-elevation-blur-0: #{$shadow-elevation-blur-0};
+  --su-shadow-elevation-blur-1: #{$shadow-elevation-blur-1};
+  --su-shadow-elevation-blur-2: #{$shadow-elevation-blur-2};
+  --su-shadow-elevation-blur-3: #{$shadow-elevation-blur-3};
+  --su-shadow-elevation-blur-4: #{$shadow-elevation-blur-4};
+  --su-shadow-elevation-spread-0: #{$shadow-elevation-spread-0};
+  --su-shadow-elevation-spread-1: #{$shadow-elevation-spread-1};
+  --su-shadow-elevation-spread-2: #{$shadow-elevation-spread-2};
+  --su-shadow-elevation-spread-3: #{$shadow-elevation-spread-3};
+  --su-shadow-elevation-spread-4: #{$shadow-elevation-spread-4};
+  --su-shadow-elevation-color-0: #{$shadow-elevation-color-0};
+  --su-shadow-elevation-color-1: #{$shadow-elevation-color-1};
+  --su-shadow-elevation-color-2: #{$shadow-elevation-color-2};
+  --su-shadow-elevation-color-3: #{$shadow-elevation-color-3};
+  --su-shadow-elevation-color-4: #{$shadow-elevation-color-4};
   // layer order
   --su-layer-order-fixed: #{$layer-order-fixed};
   --su-layer-order-alert: #{$layer-order-alert};

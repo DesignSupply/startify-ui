@@ -32,7 +32,7 @@
       position: absolute;
       left: 1rem;
       top: 1rem;
-      font-family: "startify-ui icons";
+      font-family: 'startify-ui icons';
       line-height: 1;
       font-size: calc(1.25em * 1.44);
     }
@@ -74,7 +74,7 @@
   color: var(--su-color-text-alert);
   &.su-alert-add-icon {
     &::before {
-      content: "\e912";
+      content: '\e912';
       color: var(--su-color-icon-alert);
     }
   }
@@ -92,7 +92,7 @@
     color: var(--su-status-color__error--8);
     &.su-alert-add-icon {
       &::before {
-        content: "\e908";
+        content: '\e908';
         color: var(--su-status-color__error--4);
       }
     }
@@ -111,10 +111,10 @@
     color: var(--su-status-color__warning--8);
     &.su-alert-add-icon {
       &::before {
-        content: "\e913";
+        content: '\e913';
         color: var(--su-status-color__warning--4);
       }
-    }   
+    }
     &.su-alert-add-close {
       .su-alert-close {
         &::before,
@@ -130,7 +130,7 @@
     color: var(--su-status-color__success--8);
     &.su-alert-add-icon {
       &::before {
-        content: "\e90f";
+        content: '\e90f';
         color: var(--su-status-color__success--4);
       }
     }
@@ -149,7 +149,7 @@
     color: var(--su-status-color__info--8);
     &.su-alert-add-icon {
       &::before {
-        content: "\e90f";
+        content: '\e90f';
         color: var(--su-status-color__info--4);
       }
     }
@@ -168,7 +168,7 @@
     color: var(--su-status-color__negative--8);
     &.su-alert-add-icon {
       &::before {
-        content: "\e902";
+        content: '\e902';
         color: var(--su-status-color__negative--4);
       }
     }
