@@ -2,11 +2,11 @@
  *  CSS variables
  * ---------------------------- */
 :root {
-  --su-color-modal-overlay: rgb(0 0 0 / 50%);
-  --su-size-modal-overlay-blur: 4px;
-  --su-size-modal-radius: var(--su-size-5s);
-  --su-size-modal-outside-space: var(--su-size-r);
-  --su-color-modal-separator: var(--su-gray-color__mono--2);
+  --su-color-bg-modal-overlay: rgb(0 0 0 / 50%);
+  --su-size-blur-modal-overlay: 4px;
+  --su-size-radius-modal: var(--su-size-5s);
+  --su-size-space-outside-modal: var(--su-size-r);
+  --su-color-separator-modal: var(--su-gray-color__mono--2);
 }
 
 /* -------------------------------
@@ -16,9 +16,9 @@
   margin: auto;
   box-shadow: 0 var(--su-shadow-elevation-offset-1) var(--su-shadow-elevation-blur-1)
     var(--su-shadow-elevation-spread-1) var(--su-shadow-elevation-color-1);
-  border-radius: var(--su-size-modal-radius);
-  max-width: calc(100% - calc(var(--su-size-modal-outside-space) * 2));
-  max-height: calc(100% - calc(var(--su-size-modal-outside-space) * 2));
+  border-radius: var(--su-size-radius-modal);
+  max-width: calc(100% - calc(var(--su-size-space-outside-modal) * 2));
+  max-height: calc(100% - calc(var(--su-size-space-outside-modal) * 2));
   overflow: visible;
   &[open] {
     display: grid;
@@ -26,9 +26,9 @@
     grid-template-rows: auto 1fr auto;
   }
   &::backdrop {
-    background: var(--su-color-modal-overlay);
-    -webkit-backdrop-filter: blur(var(--su-size-modal-overlay-blur));
-    backdrop-filter: blur(var(--su-size-modal-overlay-blur));
+    background: var(--su-color-bg-modal-overlay);
+    -webkit-backdrop-filter: blur(var(--su-size-blur-modal-overlay));
+    backdrop-filter: blur(var(--su-size-blur-modal-overlay));
   }
   &.su-modal-full {
     max-width: none;
@@ -55,6 +55,6 @@
     overscroll-behavior: contain;
     border-top: 1px solid;
     border-bottom: 1px solid;
-    border-color: var(--su-color-modal-separator);
+    border-color: var(--su-color-separator-modal);
   }
 }

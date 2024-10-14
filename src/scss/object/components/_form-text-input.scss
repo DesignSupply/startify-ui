@@ -4,27 +4,27 @@
  *  CSS variables
  * ---------------------------- */
 :root {
-  --su-color-text-input-border: var(--su-gray-color__mono--4);
-  --su-color-text-input-data: var(--su-default-font-color);
-  --su-color-text-input-placeholder: var(--su-gray-color__mono--2);
-  --su-color-text-input-icon: var(--su-gray-color__mono--3);
-  --su-size-text-input-radius: var(--su-size-5s);
-  --su-min-text-area-row: 4;
-  --su-max-text-area-row: 8;
+  --su-color-border-text-input: var(--su-gray-color__mono--4);
+  --su-color-text-text-input: var(--su-default-font-color);
+  --su-color-placeholder-text-input: var(--su-gray-color__mono--2);
+  --su-color-icon-text-input: var(--su-gray-color__mono--3);
+  --su-size-radius-text-input: var(--su-size-5s);
+  --su-min-row-text-area: 4;
+  --su-max-row-text-area: 8;
 }
 
 /* -------------------------------
  *  text input (single)
  * ---------------------------- */
 .su-form-text-input {
-  border: 1px solid var(--su-color-text-input-border);
-  border-radius: var(--su-size-text-input-radius);
+  border: 1px solid var(--su-color-border-text-input);
+  border-radius: var(--su-size-radius-text-input);
   padding: 0.5em 1em;
-  color: var(--su-color-text-input-data);
+  color: var(--su-color-text-text-input);
   max-width: 100%;
   display: inline-block;
   &:has(input:focus-visible) {
-    outline: 1px solid var(--su-color-text-input-border);
+    outline: 1px solid var(--su-color-border-text-input);
   }
   input {
     font-size: inherit;
@@ -33,7 +33,7 @@
       outline: none;
     }
     &::placeholder {
-      color: var(--su-color-text-input-placeholder);
+      color: var(--su-color-placeholder-text-input);
     }
     // default ui hidden
     &::-webkit-inner-spin-button {
@@ -70,7 +70,7 @@
         width: 1lh;
         height: 1lh;
         font-family: 'startify-ui icons';
-        color: var(--su-color-text-input-icon);
+        color: var(--su-color-icon-text-input);
         line-height: 1;
         font-size: calc(1em * 1.44);
       }
@@ -112,20 +112,20 @@
  *  text input (mulch)
  * ---------------------------- */
 .su-form-text-area {
-  border: 1px solid var(--su-color-text-input-border);
-  border-radius: var(--su-size-text-input-radius);
+  border: 1px solid var(--su-color-border-text-input);
+  border-radius: var(--su-size-radius-text-input);
   padding: 0.5em 1em;
-  color: var(--su-color-text-input-data);
+  color: var(--su-color-text-text-input);
   max-width: 100%;
   display: inline-block;
   field-sizing: content;
-  min-height: calc(var(--su-min-text-area-row) * 1lh);
-  max-height: calc(var(--su-max-text-area-row) * 1lh);
+  min-height: calc(var(--su-min-row-text-area) * 1lh);
+  max-height: calc(var(--su-max-row-text-area) * 1lh);
   resize: vertical;
   &:focus-visible {
-    outline: 1px solid var(--su-color-text-input-border);
+    outline: 1px solid var(--su-color-border-text-input);
   }
   &::placeholder {
-    color: var(--su-color-text-input-placeholder);
+    color: var(--su-color-placeholder-text-input);
   }
 }

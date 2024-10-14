@@ -2,17 +2,17 @@
  *  CSS variables
  * ---------------------------- */
 :root {
-  --su-color-accordion-border: var(--su-gray-color__mono--4);
-  --su-size-accordion-radius: var(--su-size-5s);
-  --su-color-accordion-detail-bg: var(--su-gray-color__mono--0);
+  --su-color-border-accordion: var(--su-gray-color__mono--4);
+  --su-size-radius-accordion: var(--su-size-5s);
+  --su-color-bg-detail-accordion: var(--su-gray-color__mono--0);
 }
 
 /* -------------------------------
  *  accordion
  * ---------------------------- */
 .su-accordion {
-  border: 1px solid var(--su-color-accordion-border);
-  border-radius: var(--su-size-accordion-radius);
+  border: 1px solid var(--su-color-border-accordion);
+  border-radius: var(--su-size-radius-accordion);
   overflow: hidden;
   &-summary {
     font-weight: bold;
@@ -25,7 +25,7 @@
   }
   &-detail {
     padding: 1em;
-    background: var(--su-color-accordion-detail-bg);
+    background: var(--su-color-bg-detail-accordion);
   }
   &.su-accordion-add-icon {
     &-left,

@@ -1,0 +1,83 @@
+@use '../../foundation/import' as *;
+
+/* -------------------------------
+ *  CSS variables
+ * ---------------------------- */
+:root {
+  --su-color-border-checkbox: var(--su-gray-color__mono--4);
+  --su-color-border-checkbox-hover: var(--su-palette-color__pink-red--0);
+  --su-color-border-checkbox-focus: var(--su-palette-color__pink-red--2);
+  --su-color-bg-checkbox: var(--su-color-white);
+  --su-color-fill-checkbox: var(--su-palette-color__pink-red--4);
+  --su-color-icon-checkbox: var(--su-color-white);
+  --su-size-radius-checkbox: var(--su-size-5s);
+}
+
+/* -------------------------------
+ *  checkbox
+ * ---------------------------- */
+.su-form-checkbox {
+  appearance: none;
+  width: 1.25em;
+  height: 1.25em;
+  border: 1px solid var(--su-color-border-checkbox);
+  border-radius: var(--su-size-radius-checkbox);
+  position: relative;
+  background: var(--su-color-bg-checkbox);
+  font-size: inherit;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    mask-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAyMiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTMuMjIxOTggNC4yOTI5M0wwLjM5MzU1NSA3LjEyMTM2TDguODc4ODQgMTUuNjA2NkwyMS42MDY4IDIuODc4NzJMMTguNzc4MyAwLjA1MDI5M0w4Ljg3ODg0IDkuOTQ5NzlMMy4yMjE5OCA0LjI5MjkzWiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg==');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    background: var(--su-color-white);
+  }
+  &:focus-visible,
+  &.su-form-checkbox-state-focus {
+    outline: 2px solid var(--su-color-border-checkbox-focus);
+    outline-offset: 0px;
+  }
+  &:checked,
+  &.su-form-checkbox-state-checked {
+    background: var(--su-color-fill-checkbox);
+    border: 1px solid var(--su-color-fill-checkbox);
+    &::before {
+      opacity: 1;
+    }
+  }
+  &.su-form-checkbox-state-hover {
+    outline: 4px solid var(--su-color-border-checkbox-hover);
+    outline-offset: 0px;
+  }
+  @include hover-style() {
+    outline: 4px solid var(--su-color-border-checkbox-hover);
+    outline-offset: 0px;
+  }
+  &:disabled,
+  &.su-form-checkbox-state-disabled {
+    @include hover-style() {
+      outline: none;
+    }
+  }
+}
+label {
+  &:has(> .su-form-checkbox) {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: 0.5em;
+    width: fit-content;
+  }
+  &:has(> .su-form-checkbox:disabled),
+  &:has(> .su-form-checkbox.su-form-checkbox-state-disabled) {
+    opacity: 0.2;
+    filter: grayscale(1);
+  }
+}

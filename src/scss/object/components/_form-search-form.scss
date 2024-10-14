@@ -4,22 +4,23 @@
  *  CSS variables
  * ---------------------------- */
 :root {
-  --su-color-search-form-border: var(--su-gray-color__mono--4);
-  --su-color-search-form-data: var(--su-default-font-color);
-  --su-color-search-form-placeholder: var(--su-gray-color__mono--2);
-  --su-color-search-form-icon: var(--su-gray-color__mono--3);
-  --su-size-search-form-radius: var(--su-size-5s);
-  --su-color-search-submit-border: var(--su-gray-color__mono--4);
-  --su-color-search-submit-bg: var(--su-gray-color__mono--4);
-  --su-color-search-submit-bg-hover: var(--su-gray-color__mono--6);
-  --su-color-search-submit-text: var(--su-color-white);
+  --su-color-border-search-form: var(--su-gray-color__mono--4);
+  --su-color-text-search-form: var(--su-default-font-color);
+  --su-color-placeholder-search-form: var(--su-gray-color__mono--2);
+  --su-color-icon-search-form: var(--su-gray-color__mono--3);
+  --su-size-radius-search-form: var(--su-size-5s);
+  --su-color-border-search-submit: var(--su-palette-color__pink-red--4);
+  --su-color-bg-search-submit: var(--su-palette-color__pink-red--4);
+  --su-color-bg-search-submit-hover: var(--su-palette-color__pink-red--2);
+  --su-color-bg-search-submit-active: var(--su-palette-color__pink-red--6);
+  --su-color-text-search-submit: var(--su-color-white);
 }
 
 /* -------------------------------
  *  search form
  * ---------------------------- */
 .su-form-search {
-  color: var(--su-color-search-form-data);
+  color: var(--su-color-text-search-form);
   max-width: 100%;
   display: inline-flex;
   justify-content: flex-start;
@@ -33,16 +34,16 @@
     font-size: inherit;
     max-width: 100%;
     width: 100%;
-    border: 1px solid var(--su-color-search-form-border);
-    border-radius: var(--su-size-search-form-radius) 0 0 var(--su-size-search-form-radius);
+    border: 1px solid var(--su-color-border-search-form);
+    border-radius: var(--su-size-radius-search-form) 0 0 var(--su-size-radius-search-form);
     padding: 0.5em 1em;
     flex-grow: 1;
     flex-shrink: 1;
     &:focus-visible {
-      outline: 1px solid var(--su-color-search-form-border);
+      outline: 1px solid var(--su-color-border-search-form);
     }
     &::placeholder {
-      color: var(--su-color-search-form-placeholder);
+      color: var(--su-color-placeholder-search-form);
     }
   }
   input[type='search'] {
@@ -55,26 +56,29 @@
     flex-grow: 0;
     flex-shrink: 0;
     padding: 0.5em 1em;
-    color: var(--su-color-search-submit-text);
-    background: var(--su-color-search-submit-bg);
+    color: var(--su-color-text-search-submit);
+    background: var(--su-color-bg-search-submit);
     font-weight: bold;
-    border-radius: 0 var(--su-size-search-form-radius) var(--su-size-search-form-radius) 0;
+    border-radius: 0 var(--su-size-radius-search-form) var(--su-size-radius-search-form) 0;
     transition: transition(background);
     font-size: inherit;
     &:focus-visible {
-      outline: 1px solid var(--su-color-search-submit-bg);
+      outline: 1px solid var(--su-color-bg-search-submit);
     }
     @include hover-style() {
       cursor: pointer;
-      background: var(--su-color-search-submit-bg-hover);
+      background: var(--su-color-bg-search-submit-hover);
+    }
+    &:active {
+      background: var(--su-color-bg-search-submit-active);
     }
   }
   &:has(.su-form-search-input-group) {
     .su-form-search-input-group {
       font-size: inherit;
       max-width: 100%;
-      border: 1px solid var(--su-color-search-form-border);
-      border-radius: var(--su-size-search-form-radius) 0 0 var(--su-size-search-form-radius);
+      border: 1px solid var(--su-color-border-search-form);
+      border-radius: var(--su-size-radius-search-form) 0 0 var(--su-size-radius-search-form);
       padding: 0.5em 1em;
       flex-grow: 1;
       flex-shrink: 1;
@@ -82,7 +86,7 @@
       justify-content: flex-start;
       align-items: center;
       &:has(input:focus-visible) {
-        outline: 1px solid var(--su-color-search-form-border);
+        outline: 1px solid var(--su-color-border-search-form);
       }
       input[type='search'],
       input[type='text'],
@@ -105,6 +109,7 @@
     width: 1lh;
     height: 1lh;
     background: var(--su-status-color__negative--4);
+    transition: transition(background);
     mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI0IDI0Ij48bWFzayBpZD0iYSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB4PSIwIiB5PSIwIiBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIiBzdHlsZT0ibWFzay10eXBlOmFscGhhIj48cGF0aCBmaWxsPSIjRDlEOUQ5IiBkPSJNMCAwaDI0djI0SDB6Ii8+PC9tYXNrPjxnIGZpbGw9IiMwMDAiIG1hc2s9InVybCgjYSkiPjxwYXRoIGQ9Ik04LjQ2NCA4LjQ2NGExIDEgMCAwIDEgMS40MTUgMEwxMiAxMC41ODZsMi4xMjEtMi4xMjJhMSAxIDAgMCAxIDEuNDE1IDEuNDE1TDEzLjQxNCAxMmwyLjEyMiAyLjEyMWExIDEgMCAwIDEtMS40MTUgMS40MTVMMTIgMTMuNDE0bC0yLjEyMSAyLjEyMmExIDEgMCAxIDEtMS40MTUtMS40MTVMMTAuNTg2IDEyIDguNDY0IDkuODc5YTEgMSAwIDAgMSAwLTEuNDE1Ii8+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMjEgMTJhOSA5IDAgMSAxLTE4IDAgOSA5IDAgMCAxIDE4IDBtLTIgMGE3IDcgMCAxIDEtMTQgMCA3IDcgMCAwIDEgMTQgMCIgY2xpcC1ydWxlPSJldmVub2RkIi8+PC9nPjwvc3ZnPg==');
     mask-repeat: no-repeat;
     mask-position: center;
@@ -113,11 +118,14 @@
     font-size: inherit;
     flex-grow: 0;
     flex-shrink: 0;
+    &:focus-visible {
+      background: var(--su-status-color__negative--6);
+    }
     @include hover-style() {
-      background: var(--su-status-color__negative--8);
+      background: var(--su-status-color__negative--2);
       cursor: pointer;
     }
-    &:focus-visible {
+    &:active {
       background: var(--su-status-color__negative--8);
     }
   }
@@ -131,7 +139,7 @@
       width: 1lh;
       height: 1lh;
       font-family: 'startify-ui icons';
-      color: var(--su-color-search-form-icon);
+      color: var(--su-color-icon-search-form);
       line-height: 1;
       font-size: calc(1em * 1.44);
     }

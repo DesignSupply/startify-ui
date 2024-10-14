@@ -4,19 +4,19 @@
  *  CSS variables
  * ---------------------------- */
 :root {
-  --su-color-selectbox-border: var(--su-gray-color__mono--4);
-  --su-color-selectbox-data: var(--su-default-font-color);
-  --su-color-selectbox-icon: var(--su-default-font-color);
-  --su-size-selectbox-radius: var(--su-size-5s);
+  --su-color-border-selectbox: var(--su-gray-color__mono--4);
+  --su-color-text-selectbox: var(--su-default-font-color);
+  --su-color-icon-selectbox: var(--su-default-font-color);
+  --su-size-radius-selectbox: var(--su-size-5s);
 }
 
 /* -------------------------------
  *  selectbox
  * ---------------------------- */
 .su-form-selectbox {
-  border: 1px solid var(--su-color-selectbox-border);
-  border-radius: var(--su-size-selectbox-radius);
-  color: var(--su-color-selectbox-data);
+  border: 1px solid var(--su-color-border-selectbox);
+  border-radius: var(--su-size-radius-selectbox);
+  color: var(--su-color-text-selectbox);
   max-width: 100%;
   display: inline-block;
   overflow: hidden;
@@ -35,7 +35,7 @@
       width: 12px;
       height: 2px;
       border-radius: 1px;
-      background: var(--su-color-selectbox-icon);
+      background: var(--su-color-icon-selectbox);
       position: absolute;
       top: calc(50% - 1px);
       right: 1em;
@@ -53,7 +53,7 @@
     }
   }
   &:has(select:focus-visible) {
-    outline: 1px solid var(--su-color-selectbox-border);
+    outline: 1px solid var(--su-color-border-selectbox);
   }
   &:has(select[multiple]) {
     select {
@@ -85,7 +85,7 @@
     optgroup {
       margin: 0.5em 0.5em 0.5em 0;
       padding: 0.5em 0 0 0;
-      border-top: 1px dotted var(--su-color-selectbox-border);
+      border-top: 1px dotted var(--su-color-border-selectbox);
       option {
         margin: 0.5em 0;
         &:first-child {

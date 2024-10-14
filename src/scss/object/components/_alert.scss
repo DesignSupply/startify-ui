@@ -2,7 +2,7 @@
  *  CSS variables
  * ---------------------------- */
 :root {
-  --su-color-background-alert: var(--su-palette-color__violet--0);
+  --su-color-bg-alert: var(--su-palette-color__violet--0);
   --su-color-border-alert: var(--su-palette-color__violet--4);
   --su-color-text-alert: var(--su-palette-color__violet--8);
   --su-color-icon-alert: var(--su-palette-color__violet--4);
@@ -69,7 +69,7 @@
   }
 }
 .su-alert {
-  background: var(--su-color-background-alert);
+  background: var(--su-color-bg-alert);
   border-color: var(--su-color-border-alert);
   color: var(--su-color-text-alert);
   &.su-alert-add-icon {

@@ -2,7 +2,7 @@
  *  CSS variables
  * ---------------------------- */
 :root {
-  --su-color-text-link-icon: var(--su-default-font-color);
+  --su-color-icon-text-link: var(--su-default-font-color);
 }
 
 /* -------------------------------
@@ -24,14 +24,14 @@
       height: 0.7em;
     }
     &::before {
-      border: 2px solid var(--su-color-text-link-icon);
+      border: 2px solid var(--su-color-icon-text-link);
       right: 0;
       bottom: 10px;
       // bottom: calc(0.5lh - 6px);
     }
     &::after {
-      border-left: 2px solid var(--su-color-text-link-icon);
-      border-bottom: 2px solid var(--su-color-text-link-icon);
+      border-left: 2px solid var(--su-color-icon-text-link);
+      border-bottom: 2px solid var(--su-color-icon-text-link);
       right: 4px;
       bottom: 6px;
       // bottom: calc(0.5lh - 10px);
