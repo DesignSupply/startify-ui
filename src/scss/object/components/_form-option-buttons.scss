@@ -1,0 +1,67 @@
+@use '../../foundation/import' as *;
+
+/* -------------------------------
+ *  CSS variables
+ * ---------------------------- */
+:root {
+  --su-color-border-option-buttons: var(--su-gray-color__mono--3);
+  --su-color-border-option-buttons-checked: var(--su-palette-color__pink-red--6);
+  --su-color-border-option-buttons-hover: var(--su-palette-color__pink-red--0);
+  --su-color-border-option-buttons-focus: var(--su-palette-color__pink-red--2);
+  --su-color-text-option-buttons: var(--su-gray-color__mono--3);
+  --su-color-fill-option-buttons: var(--su-palette-color__pink-red--4);
+  --su-color-text-option-buttons-checked: var(--su-color-white);
+  --su-size-radius-option-buttons: var(--su-size-3s);
+}
+
+/* -------------------------------
+ *  option buttons
+ * ---------------------------- */
+.su-form-option-buttons {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  label:has(> input[type='radio']),
+  label:has(> input[type='checkbox']) {
+    padding: 1em;
+    border: 1px solid;
+    line-height: 1;
+    border-color: var(--su-color-border-option-buttons);
+    color: var(--su-color-text-option-buttons);
+    &:first-of-type {
+      border-top-left-radius: var(--su-size-radius-option-buttons);
+      border-bottom-left-radius: var(--su-size-radius-option-buttons);
+    }
+    &:last-of-type {
+      border-top-right-radius: var(--su-size-radius-option-buttons);
+      border-bottom-right-radius: var(--su-size-radius-option-buttons);
+    }
+    &:not(:first-of-type) {
+      border-left-width: 0;
+    }
+    input[type='radio'],
+    input[type='checkbox'] {
+      appearance: none;
+    }
+    @include hover-style() {
+      outline: 4px solid var(--su-color-border-option-buttons-hover);
+      position: relative;
+      z-index: 1;
+    }
+  }
+  *:has(> input[type='radio']:checked),
+  *:has(> input[type='checkbox']:checked) {
+    background: var(--su-color-fill-option-buttons);
+    color: var(--su-color-text-option-buttons-checked);
+    border-color: var(--su-color-border-option-buttons-checked);
+  }
+  *:has(> input[type='radio']:focus-visible),
+  *:has(> input[type='checkbox']:focus-visible) {
+    outline: 2px solid var(--su-color-border-option-buttons-focus);
+    position: relative;
+    z-index: 1;
+    @include hover-style() {
+      outline: 4px solid var(--su-color-border-option-buttons-hover);
+    }
+  }
+}

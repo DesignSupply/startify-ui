@@ -316,6 +316,63 @@ $status-color-list: (
 }
 
 /* -------------------------------
+ *  theme color
+ * ---------------------------- */
+$theme-color-list: (
+  base: (
+    0: gray-color(cool, 0),
+    1: gray-color(cool, 1),
+    2: gray-color(cool, 2),
+    3: gray-color(cool, 3),
+    4: gray-color(cool, 4),
+    5: gray-color(cool, 5),
+    6: gray-color(cool, 6),
+    7: gray-color(cool, 7),
+    8: gray-color(cool, 8),
+    9: gray-color(cool, 9)
+  ),
+  primary: (
+    0: palette-color(blue-violet, 0),
+    1: palette-color(blue-violet, 1),
+    2: palette-color(blue-violet, 2),
+    3: palette-color(blue-violet, 3),
+    4: palette-color(blue-violet, 4),
+    5: palette-color(blue-violet, 5),
+    6: palette-color(blue-violet, 6),
+    7: palette-color(blue-violet, 7),
+    8: palette-color(blue-violet, 8),
+    9: palette-color(blue-violet, 9)
+  ),
+  secondary: (
+    0: palette-color(light-blue, 0),
+    1: palette-color(light-blue, 1),
+    2: palette-color(light-blue, 2),
+    3: palette-color(light-blue, 3),
+    4: palette-color(light-blue, 4),
+    5: palette-color(light-blue, 5),
+    6: palette-color(light-blue, 6),
+    7: palette-color(light-blue, 7),
+    8: palette-color(light-blue, 8),
+    9: palette-color(light-blue, 9)
+  ),
+  accent: (
+    0: palette-color(orange-yellow, 0),
+    1: palette-color(orange-yellow, 1),
+    2: palette-color(orange-yellow, 2),
+    3: palette-color(orange-yellow, 3),
+    4: palette-color(orange-yellow, 4),
+    5: palette-color(orange-yellow, 5),
+    6: palette-color(orange-yellow, 6),
+    7: palette-color(orange-yellow, 7),
+    8: palette-color(orange-yellow, 8),
+    9: palette-color(orange-yellow, 9)
+  )
+) !default;
+@function theme-color($theme-color-hue-key, $theme-color-tone-key) {
+  @return #{map-get(map-get($theme-color-list, $theme-color-hue-key), $theme-color-tone-key)};
+}
+
+/* -------------------------------
  *  CSS variables
  * ---------------------------- */
 :root {
@@ -564,4 +621,45 @@ $status-color-list: (
   --su-status-color__negative--7: #{status-color(negative, 7)};
   --su-status-color__negative--8: #{status-color(negative, 8)};
   --su-status-color__negative--9: #{status-color(negative, 9)};
+  // theme color
+  --su-theme-color__base--0: #{theme-color(base, 0)};
+  --su-theme-color__base--1: #{theme-color(base, 1)};
+  --su-theme-color__base--2: #{theme-color(base, 2)};
+  --su-theme-color__base--3: #{theme-color(base, 3)};
+  --su-theme-color__base--4: #{theme-color(base, 4)};
+  --su-theme-color__base--5: #{theme-color(base, 5)};
+  --su-theme-color__base--6: #{theme-color(base, 6)};
+  --su-theme-color__base--7: #{theme-color(base, 7)};
+  --su-theme-color__base--8: #{theme-color(base, 8)};
+  --su-theme-color__base--9: #{theme-color(base, 9)};
+  --su-theme-color__primary--0: #{theme-color(primary, 0)};
+  --su-theme-color__primary--1: #{theme-color(primary, 1)};
+  --su-theme-color__primary--2: #{theme-color(primary, 2)};
+  --su-theme-color__primary--3: #{theme-color(primary, 3)};
+  --su-theme-color__primary--4: #{theme-color(primary, 4)};
+  --su-theme-color__primary--5: #{theme-color(primary, 5)};
+  --su-theme-color__primary--6: #{theme-color(primary, 6)};
+  --su-theme-color__primary--7: #{theme-color(primary, 7)};
+  --su-theme-color__primary--8: #{theme-color(primary, 8)};
+  --su-theme-color__primary--9: #{theme-color(primary, 9)};
+  --su-theme-color__secondary--0: #{theme-color(secondary, 0)};
+  --su-theme-color__secondary--1: #{theme-color(secondary, 1)};
+  --su-theme-color__secondary--2: #{theme-color(secondary, 2)};
+  --su-theme-color__secondary--3: #{theme-color(secondary, 3)};
+  --su-theme-color__secondary--4: #{theme-color(secondary, 4)};
+  --su-theme-color__secondary--5: #{theme-color(secondary, 5)};
+  --su-theme-color__secondary--6: #{theme-color(secondary, 6)};
+  --su-theme-color__secondary--7: #{theme-color(secondary, 7)};
+  --su-theme-color__secondary--8: #{theme-color(secondary, 8)};
+  --su-theme-color__secondary--9: #{theme-color(secondary, 9)};
+  --su-theme-color__accent--0: #{theme-color(accent, 0)};
+  --su-theme-color__accent--1: #{theme-color(accent, 1)};
+  --su-theme-color__accent--2: #{theme-color(accent, 2)};
+  --su-theme-color__accent--3: #{theme-color(accent, 3)};
+  --su-theme-color__accent--4: #{theme-color(accent, 4)};
+  --su-theme-color__accent--5: #{theme-color(accent, 5)};
+  --su-theme-color__accent--6: #{theme-color(accent, 6)};
+  --su-theme-color__accent--7: #{theme-color(accent, 7)};
+  --su-theme-color__accent--8: #{theme-color(accent, 8)};
+  --su-theme-color__accent--9: #{theme-color(accent, 9)};
 }

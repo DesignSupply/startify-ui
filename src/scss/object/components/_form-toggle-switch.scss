@@ -1,0 +1,82 @@
+@use '../../foundation/import' as *;
+
+/* -------------------------------
+ *  CSS variables
+ * ---------------------------- */
+:root {
+  --su-color-bg-toggle-switch: var(--su-status-color__negative--2);
+  --su-color-bg-toggle-switch-checked: var(--su-palette-color__pink-red--4);
+  --su-color-border-toggle-switch-hover: var(--su-palette-color__pink-red--0);
+  --su-color-border-toggle-switch-focus: var(--su-palette-color__pink-red--2);
+  --su-color-button-toggle-switch: var(--su-color-white);
+  --su-size-toggle-switch: 1.5em;
+  --su-size-radius-toggle-switch: calc(var(--su-size-toggle-switch) / 2);
+}
+
+/* -------------------------------
+ *  toggle-switch
+ * ---------------------------- */
+.su-form-toggle-switch {
+  appearance: none;
+  width: calc(var(--su-size-toggle-switch) * 2);
+  height: var(--su-size-toggle-switch);
+  border-radius: var(--su-size-radius-toggle-switch);
+  position: relative;
+  background: var(--su-color-bg-toggle-switch);
+  transition: transition(background);
+  font-size: inherit;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    display: block;
+    width: calc(50% - 8px);
+    height: calc(100% - 8px);
+    background: var(--su-color-white);
+    border-radius: var(--su-size-radius-toggle-switch);
+    transition: transition(transform);
+    box-shadow: 0 0 0 2px rgb(0 0 0 / 0.05);
+  }
+  &:focus-visible,
+  &.su-form-toggle-switch-state-focus {
+    outline: 2px solid var(--su-color-border-toggle-switch-focus);
+    outline-offset: 0px;
+  }
+  &:checked,
+  &.su-form-toggle-switch-state-checked {
+    background: var(--su-color-bg-toggle-switch-checked);
+    &::before {
+      transform: translate(calc(100% + 8px), 0);
+    }
+  }
+  &.su-form-toggle-switch-state-hover {
+    outline: 4px solid var(--su-color-border-toggle-switch-hover);
+    outline-offset: 0px;
+  }
+  @include hover-style() {
+    outline: 4px solid var(--su-color-border-toggle-switch-hover);
+    outline-offset: 0px;
+    cursor: pointer;
+  }
+  &:disabled,
+  &.su-form-toggle-switch-state-disabled {
+    @include hover-style() {
+      outline: none;
+    }
+  }
+}
+label {
+  &:has(> .su-form-toggle-switch) {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: 0.5em;
+    width: fit-content;
+  }
+  &:has(> .su-form-toggle-switch:disabled),
+  &:has(> .su-form-toggle-switch.su-form-toggle-switch-state-disabled) {
+    opacity: 0.2;
+    filter: grayscale(1);
+  }
+}
