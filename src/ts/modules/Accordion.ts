@@ -1,7 +1,6 @@
 'use strict';
 
 export class Accordion {
-  className: string;
   dataNameAccordion: string;
   dataNameAccordionSummary: string;
   dataNameAccordionDetail: string;
@@ -10,20 +9,18 @@ export class Accordion {
   accordionElements: NodeList;
 
   constructor(parameter: {
-    className: string;
     dataNameAccordion: string;
     dataNameAccordionSummary: string;
     dataNameAccordionDetail: string;
     duration: number;
     easing: string;
   }) {
-    this.className = parameter.className;
     this.dataNameAccordion = parameter.dataNameAccordion;
     this.dataNameAccordionSummary = parameter.dataNameAccordionSummary;
     this.dataNameAccordionDetail = parameter.dataNameAccordionDetail;
     this.duration = parameter.duration;
     this.easing = parameter.easing;
-    this.accordionElements = document.querySelectorAll(`.${this.className}`);
+    this.accordionElements = document.querySelectorAll(`[data-su-js="${this.dataNameAccordion}"]`);
     this.init();
   }
 

@@ -9,7 +9,7 @@
   display: grid;
   grid-template:
     'header' auto
-    'main' 1fr
+    'main' minmax(0, 1fr)
     'footer' auto
     / 100%;
 }

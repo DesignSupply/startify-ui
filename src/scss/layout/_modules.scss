@@ -4,7 +4,13 @@
  *  CSS variables
  * ---------------------------- */
 :root {
-  --su-container-gutter-size: var(--su-size-r);
+  --su-container-gutter-size: var(--su-size-2l);
+  @include media-query(mobile-l) {
+    --su-container-gutter-size: var(--su-size-r);
+  }
+  @include media-query(mobile-m) {
+    --su-container-gutter-size: var(--su-size-s);
+  }
 }
 
 /* -------------------------------
@@ -190,7 +196,7 @@
       grid-template-columns: repeat(1, minmax(0, 1fr));
     }
     @include media-query(mobile-l, min-width) {
-      grid-template-columns: 1fr 3fr;
+      grid-template-columns: minmax(0, 1fr) 3fr;
     }
   }
   &.su-row-col-sidebar-r {
@@ -198,7 +204,7 @@
       grid-template-columns: repeat(1, minmax(0, 1fr));
     }
     @include media-query(mobile-l, min-width) {
-      grid-template-columns: 3fr 1fr;
+      grid-template-columns: 3fr minmax(0, 1fr);
     }
   }
   &.su-row-col-units {
