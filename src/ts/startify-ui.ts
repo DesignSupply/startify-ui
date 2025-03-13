@@ -8,6 +8,7 @@ import { Accordion } from './modules/Accordion';
 import { Modal } from './modules/ModalDialog';
 import { RangeInput } from './modules/RangeInput';
 import { RangeInputMultiple } from './modules/RangeInputMultiple';
+import { FileInput } from './modules/FileInput';
 
 // accordion components
 new Accordion({
@@ -38,4 +39,14 @@ new RangeInputMultiple({
   dataNameRangeInputMultipleMax: 'su-form-range-input-multiple-max',
   dataNameRangeOutputMultipleMin: 'su-form-range-output-multiple-min',
   dataNameRangeOutputMultipleMax: 'su-form-range-output-multiple-max'
+});
+
+// file input components
+new FileInput({
+  dataNameFileInput: 'su-form-file-input',
+  dataNameFileInputList: 'su-form-file-input-list',
+  dataNameFileInputFileName: 'su-form-file-input-file-name',
+  dataNameFileInputFileRemove: 'su-form-file-input-file-remove',
+  dataNameFileInputThumbnailPreview: 'su-form-file-input-thumbnail-preview',
+  dataNameFileInputThumbnailRemove: 'su-form-file-input-thumbnail-remove'
 });
