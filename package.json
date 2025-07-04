@@ -1,6 +1,6 @@
 {
   "name": "@designsupply/startify-ui",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "The CSS framework for efficiently developing the UI design of websites and applications.",
   "main": "index.js",
   "scripts": {
