@@ -35,7 +35,7 @@ $font-strike: line-through !default;
  *  format
  * ---------------------------- */
 $default-font-size: 1rem !default;
-$default-font-color: #333 !default;
+$default-font-color: var(--su-gray-color__mono--9) !default;
 $default-font-weight: normal !default;
 $default-line-height: 1.8 !default;
 $default-letter-spacing: 0.0625rem !default;

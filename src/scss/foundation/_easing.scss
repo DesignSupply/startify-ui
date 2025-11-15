@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 /* -------------------------------
  *  easing
  * ---------------------------- */
@@ -30,40 +32,50 @@ $easing-list: (
   ease-inout-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86),
   ease-in-back: cubic-bezier(0.6, -0.28, 0.735, 0.045),
   ease-out-back: cubic-bezier(0.18, 0.89, 0.32, 1.28),
-  ease-inout-back: cubic-bezier(0.68, -0.55, 0.27, 1.55)
+  ease-inout-back: cubic-bezier(0.68, -0.55, 0.27, 1.55),
+  steps-2: steps(3, jump-none),
+  steps-4: steps(5, jump-none),
+  steps-5: steps(6, jump-none),
+  steps-8: steps(9, jump-none),
+  steps-10: steps(11, jump-none),
 ) !default;
 
 /* -------------------------------
  *  CSS variables
  * ---------------------------- */
 :root {
-  --su-easing-linear: #{map-get($easing-list, linear)};
-  --su-easing-ease: #{map-get($easing-list, ease)};
-  --su-easing-ease-in: #{map-get($easing-list, ease-in)};
-  --su-easing-ease-out: #{map-get($easing-list, ease-out)};
-  --su-easing-ease-inout: #{map-get($easing-list, ease-inout)};
-  --su-easing-ease-in-sine: #{map-get($easing-list, ease-in-sine)};
-  --su-easing-ease-out-sine: #{map-get($easing-list, ease-out-sine)};
-  --su-easing-ease-inout-sine: #{map-get($easing-list, ease-inout-sine)};
-  --su-easing-ease-in-quad: #{map-get($easing-list, ease-in-quad)};
-  --su-easing-ease-out-quad: #{map-get($easing-list, ease-out-quad)};
-  --su-easing-ease-inout-quad: #{map-get($easing-list, ease-inout-quad)};
-  --su-easing-ease-in-cubic: #{map-get($easing-list, ease-in-cubic)};
-  --su-easing-ease-out-cubic: #{map-get($easing-list, ease-out-cubic)};
-  --su-easing-ease-inout-cubic: #{map-get($easing-list, ease-inout-cubic)};
-  --su-easing-ease-in-quart: #{map-get($easing-list, ease-in-quart)};
-  --su-easing-ease-out-quart: #{map-get($easing-list, ease-out-quart)};
-  --su-easing-ease-inout-quart: #{map-get($easing-list, ease-inout-quart)};
-  --su-easing-ease-in-quint: #{map-get($easing-list, ease-in-quint)};
-  --su-easing-ease-out-quint: #{map-get($easing-list, ease-out-quint)};
-  --su-easing-ease-inout-quint: #{map-get($easing-list, ease-inout-quint)};
-  --su-easing-ease-in-expo: #{map-get($easing-list, ease-in-expo)};
-  --su-easing-ease-out-expo: #{map-get($easing-list, ease-out-expo)};
-  --su-easing-ease-inout-expo: #{map-get($easing-list, ease-inout-expo)};
-  --su-easing-ease-in-circ: #{map-get($easing-list, ease-in-circ)};
-  --su-easing-ease-out-circ: #{map-get($easing-list, ease-out-circ)};
-  --su-easing-ease-inout-circ: #{map-get($easing-list, ease-inout-circ)};
-  --su-easing-ease-in-back: #{map-get($easing-list, ease-in-back)};
-  --su-easing-ease-out-back: #{map-get($easing-list, ease-out-back)};
-  --su-easing-ease-inout-back: #{map-get($easing-list, ease-inout-back)};
+  --su-easing-linear: #{map.get($easing-list, linear)};
+  --su-easing-ease: #{map.get($easing-list, ease)};
+  --su-easing-ease-in: #{map.get($easing-list, ease-in)};
+  --su-easing-ease-out: #{map.get($easing-list, ease-out)};
+  --su-easing-ease-inout: #{map.get($easing-list, ease-inout)};
+  --su-easing-ease-in-sine: #{map.get($easing-list, ease-in-sine)};
+  --su-easing-ease-out-sine: #{map.get($easing-list, ease-out-sine)};
+  --su-easing-ease-inout-sine: #{map.get($easing-list, ease-inout-sine)};
+  --su-easing-ease-in-quad: #{map.get($easing-list, ease-in-quad)};
+  --su-easing-ease-out-quad: #{map.get($easing-list, ease-out-quad)};
+  --su-easing-ease-inout-quad: #{map.get($easing-list, ease-inout-quad)};
+  --su-easing-ease-in-cubic: #{map.get($easing-list, ease-in-cubic)};
+  --su-easing-ease-out-cubic: #{map.get($easing-list, ease-out-cubic)};
+  --su-easing-ease-inout-cubic: #{map.get($easing-list, ease-inout-cubic)};
+  --su-easing-ease-in-quart: #{map.get($easing-list, ease-in-quart)};
+  --su-easing-ease-out-quart: #{map.get($easing-list, ease-out-quart)};
+  --su-easing-ease-inout-quart: #{map.get($easing-list, ease-inout-quart)};
+  --su-easing-ease-in-quint: #{map.get($easing-list, ease-in-quint)};
+  --su-easing-ease-out-quint: #{map.get($easing-list, ease-out-quint)};
+  --su-easing-ease-inout-quint: #{map.get($easing-list, ease-inout-quint)};
+  --su-easing-ease-in-expo: #{map.get($easing-list, ease-in-expo)};
+  --su-easing-ease-out-expo: #{map.get($easing-list, ease-out-expo)};
+  --su-easing-ease-inout-expo: #{map.get($easing-list, ease-inout-expo)};
+  --su-easing-ease-in-circ: #{map.get($easing-list, ease-in-circ)};
+  --su-easing-ease-out-circ: #{map.get($easing-list, ease-out-circ)};
+  --su-easing-ease-inout-circ: #{map.get($easing-list, ease-inout-circ)};
+  --su-easing-ease-in-back: #{map.get($easing-list, ease-in-back)};
+  --su-easing-ease-out-back: #{map.get($easing-list, ease-out-back)};
+  --su-easing-ease-inout-back: #{map.get($easing-list, ease-inout-back)};
+  --su-easing-steps-2: #{map.get($easing-list, steps-2)};
+  --su-easing-steps-4: #{map.get($easing-list, steps-4)};
+  --su-easing-steps-5: #{map.get($easing-list, steps-5)};
+  --su-easing-steps-8: #{map.get($easing-list, steps-8)};
+  --su-easing-steps-10: #{map.get($easing-list, steps-10)};
 }

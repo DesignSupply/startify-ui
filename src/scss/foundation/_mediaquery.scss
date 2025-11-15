@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 /* -------------------------------
  *  screen size & breakpoint
  * ---------------------------- */
@@ -21,11 +23,11 @@ $breakpoint-list: (
  * ---------------------------- */
 @mixin media-query($breakpoint-key: 'mobile-l', $rule: max-width) {
   @if $rule == max-width {
-    @media (width <= #{map-get($breakpoint-list, $breakpoint-key)}px) {
+    @media (width <= #{map.get($breakpoint-list, $breakpoint-key)}px) {
       @content;
     }
   } @else if $rule == min-width {
-    @media (calc(#{map-get($breakpoint-list, $breakpoint-key)}px + 1px) <= width) {
+    @media (calc(#{map.get($breakpoint-list, $breakpoint-key)}px + 1px) <= width) {
       @content;
     }
   }
