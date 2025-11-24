@@ -5,6 +5,13 @@
  * ---------------------------- */
 :root {
   --su-color-text-highlight: #ffff00;
+  --su-color-text-outline: var(--su-color-white);
+  --su-color-decoration-outline: var(--su-color-black);
+  --su-size-text-outline: 4px;
+  --su-color-text-solid-shadow: var(--su-gray-color__mono--2);
+  --su-color-decoration-solid-shadow: var(--su-color-black);
+  --su-offset-text-solid-shadow-x: 3px;
+  --su-offset-text-solid-shadow-y: 3px;
 }
 
 /* -------------------------------
@@ -36,4 +43,18 @@
 }
 .su-text-highlight {
   background: var(--su-color-text-highlight);
+}
+.su-text-outline,
+.su-text-solid-shadow {
+  font-weight: 900;
+  font-synthesis-weight: none;
+}
+.su-text-outline {
+  color: var(--su-color-text-outline);
+  -webkit-text-stroke: var(--su-size-text-outline) var(--su-color-decoration-outline);
+  paint-order: stroke;
+}
+.su-text-solid-shadow {
+  color: var(--su-color-text-solid-shadow);
+  text-shadow: var(--su-offset-text-solid-shadow-x) var(--su-offset-text-solid-shadow-y) 0 var(--su-color-decoration-solid-shadow);
 }

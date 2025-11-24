@@ -3,7 +3,7 @@
 /* -------------------------------
  *  CSS variables
  * ---------------------------- */
- :root {
+:root {
   --su-color-bg-tooltip: rgb(0 0 0 / 70%);
   --su-size-radius-tooltip: var(--su-size-5s);
   --su-size-max-width-tooltip: 12rem;
@@ -20,7 +20,9 @@
     position: absolute;
     z-index: calc(var(--su-layer-order-fixed) - 1);
     display: none;
-    transition: opacity 0.4s ease-out 0.1s, display 0.4s ease-out allow-discrete;
+    transition:
+      opacity 0.4s ease-out 0.1s,
+      display 0.4s ease-out allow-discrete;
   }
   &::before {
     content: attr(data-su-text);
@@ -46,7 +48,7 @@
     left: 50%;
     transform: translateX(-50%) translateY(0.5px);
   }
-  @include hover-style() {
+  &:hover {
     cursor: help;
     &::before,
     &::after {
@@ -102,7 +104,7 @@
   &.su-tooltip-right {
     &::before {
       bottom: 50%;
-      left: calc(100% + var(--su-size-r)); 
+      left: calc(100% + var(--su-size-r));
       transform: translateX(0) translateY(50%);
     }
     &::after {

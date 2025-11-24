@@ -30,7 +30,7 @@
   grid-template-columns: repeat(1, minmax(0, 1fr));
   justify-items: start;
   row-gap: 1em;
-  input[type="file"] {
+  input[type='file'] {
     opacity: 0;
     position: absolute;
     top: 0;
@@ -71,7 +71,7 @@
   &:active {
     background: var(--su-color-fill-button-file-input-active);
   }
-  &:has(input[type="file"]:focus-visible) {
+  &:has(input[type='file']:focus-visible) {
     outline: 2px solid var(--su-color-ring-button-file-input-focus);
   }
 }
@@ -92,7 +92,7 @@
   position: relative;
   outline-offset: 4px;
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: var(--su-size-5s);
     left: var(--su-size-5s);
@@ -104,7 +104,7 @@
     z-index: 1;
     transition: transition(background), transition(color);
   }
-  & > *:not(input[type="file"]) {
+  & > *:not(input[type='file']) {
     position: relative;
     z-index: 2;
   }
@@ -113,7 +113,7 @@
       background: var(--su-color-bg-drop-area-file-input-hover);
     }
   }
-  &:has(input[type="file"]:focus-visible) {
+  &:has(input[type='file']:focus-visible) {
     outline: 2px solid var(--su-color-ring-drop-area-file-input-focus);
   }
 }
@@ -141,7 +141,7 @@
   display: grid;
   place-items: center;
   .su-form-file-input-file-remove-icon {
-    &::before { 
+    &::before {
       color: var(--su-status-color__negative--4);
     }
   }

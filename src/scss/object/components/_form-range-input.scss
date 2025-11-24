@@ -28,7 +28,7 @@
   max-width: 100%;
   appearance: none;
   background-color: var(--su-color-bg-bar-range-input);
-  border-radius: 99em; 
+  border-radius: 99em;
   box-shadow: 0 0 4px 0 rgb(0 0 0 / 15%) inset;
   // pointer-events: none;
   &::-webkit-slider-thumb {
@@ -53,7 +53,7 @@
     outline: 4px solid var(--su-color-border-range-input-hover);
     outline-offset: 0px;
     cursor: pointer;
-  } 
+  }
   &:disabled,
   &.su-form-range-input-state-disabled {
     @include hover-style() {
@@ -140,7 +140,7 @@ label:has(> .su-form-range-input) {
   &::after {
     content: var(--su-suffix-range-output-multiple-max);
   }
-} 
+}
 label:has(> .su-form-range-input-multiple) {
   &:has(.su-form-range-input:disabled),
   &:has(.su-form-range-input.su-form-range-input-state-disabled) {
