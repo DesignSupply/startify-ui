@@ -1,0 +1,26 @@
+/* -------------------------------
+ *  container query mixin
+ * ---------------------------- */
+$default-container-condition: 'width <= calc(768px - (0.875rem * 2))';
+$default-container-name: 'container-query';
+@mixin container-query($container-name: $default-container-name, $container-condition: $default-container-condition) {
+  @container #{$container-name} (#{$container-condition}) {
+    @content;
+  }
+}
+
+/* -------------------------------
+ *  CSS variables
+ * ---------------------------- */
+:root {
+  --su-container-query-name: #{$default-container-name};
+  --su-container-query-type: inline-size;
+}
+
+/* -------------------------------
+ *  container query
+ * ---------------------------- */
+.su-container-query {
+  container-type: var(--su-container-query-type);
+  container-name: var(--su-container-query-name);
+}
