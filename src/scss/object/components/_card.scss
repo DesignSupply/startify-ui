@@ -20,85 +20,89 @@
   }
 }
 
-/* -------------------------------
- *  card-item & cardcontainer
- * ---------------------------- */
-.su-card-container {
-  display: grid;
-  column-gap: var(--su-size-gutter-card-container);
-  row-gap: var(--su-size-gutter-card-container);
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--su-size-base-width-card)), 1fr));
-  & > .su-card {
-    max-width: 100%;
-    width: 100%;
-    grid-template-rows: subgrid;
-    grid-row: span 4;
-  }
-}
-.su-card {
-  max-width: 100%;
-  width: var(--su-size-base-width-card);
-  border: 1px solid var(--su-color-border-card);
-  border-radius: var(--su-size-radius-card);
-  overflow: hidden;
-  display: grid;
-  font-size: var(--su-size-text-card);
-  row-gap: var(--su-size-gutter-card-item);
-  a {
-    text-decoration: none;
-  }
-  .su-card-outerlink,
-  .su-card-innerlink,
-  .su-card-content-top,
-  .su-card-content-bottom {
-    grid-column: 1 / 2;
-  }
-  .su-card-outerlink {
-    grid-row: 1 / 5;
+@layer component {
+
+  /* -------------------------------
+   *  card-item & cardcontainer
+   * ---------------------------- */
+  .su-card-container {
     display: grid;
-    grid-template-rows: subgrid;
-  }
-  .su-card-thumbnail {
-    grid-row: 1 / 2;
-    aspect-ratio: var(--su-ratio-aspect-thumbnail-card);
-    overflow: hidden;
-    img {
+    column-gap: var(--su-size-gutter-card-container);
+    row-gap: var(--su-size-gutter-card-container);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--su-size-base-width-card)), 1fr));
+    & > .su-card {
+      max-width: 100%;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      grid-template-rows: subgrid;
+      grid-row: span 4;
     }
   }
-  .su-card-content-top {
-    grid-row: 2 / 3;
-  }
-  .su-card-content-bottom {
-    grid-row: 3 / 4;
-  }
-  .su-card-innerlink {
-    grid-row: 4 / 5;
-    padding-inline: var(--su-size-gutter-card-item);
-    padding-bottom: var(--su-size-gutter-card-item);
-  }
-  .su-card-datetime {
-    padding-inline: var(--su-size-gutter-card-item);
-    font-size: 0.75em;
-    line-height: 1;
-  }
-  .su-card-title {
-    padding-inline: var(--su-size-gutter-card-item);
-    font-size: 1.125em;
-  }
-  .su-card-tags {
-    font-size: 0.875em;
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 1em;
-    row-gap: 0.25em;
+  .su-card {
+    max-width: 100%;
+    width: var(--su-size-base-width-card);
+    border: 1px solid var(--su-color-border-card);
+    border-radius: var(--su-size-radius-card);
+    overflow: hidden;
+    display: grid;
+    font-size: var(--su-size-text-card);
+    row-gap: var(--su-size-gutter-card-item);
     a {
-      font-size: inherit;
-      &::before {
-        content: var(--su-prefix-tag-card);
+      text-decoration: none;
+    }
+    .su-card-outerlink,
+    .su-card-innerlink,
+    .su-card-content-top,
+    .su-card-content-bottom {
+      grid-column: 1 / 2;
+    }
+    .su-card-outerlink {
+      grid-row: 1 / 5;
+      display: grid;
+      grid-template-rows: subgrid;
+    }
+    .su-card-thumbnail {
+      grid-row: 1 / 2;
+      aspect-ratio: var(--su-ratio-aspect-thumbnail-card);
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .su-card-content-top {
+      grid-row: 2 / 3;
+    }
+    .su-card-content-bottom {
+      grid-row: 3 / 4;
+    }
+    .su-card-innerlink {
+      grid-row: 4 / 5;
+      padding-inline: var(--su-size-gutter-card-item);
+      padding-bottom: var(--su-size-gutter-card-item);
+    }
+    .su-card-datetime {
+      padding-inline: var(--su-size-gutter-card-item);
+      font-size: 0.75em;
+      line-height: 1;
+    }
+    .su-card-title {
+      padding-inline: var(--su-size-gutter-card-item);
+      font-size: 1.125em;
+    }
+    .su-card-tags {
+      font-size: 0.875em;
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 1em;
+      row-gap: 0.25em;
+      a {
+        font-size: inherit;
+        &::before {
+          content: var(--su-prefix-tag-card);
+        }
       }
     }
   }
+
 }

@@ -12,46 +12,50 @@
   --su-color-border-code-inline: var(--su-palette-color__orange--4);
 }
 
-/* -------------------------------
- *  code
- * ---------------------------- */
-.su-code-block {
-  padding: 1em;
-  font-family: var(--su-font-monospace);
-  font-weight: bold;
-  font-size: var(--su-size-s);
-  line-height: 1.4;
-  white-space: pre-wrap;
-  word-break: break-word;
-  background: var(--su-color-bg-code-block);
-  color: var(--su-color-text-code-block);
-  border: 1px solid var(--su-color-border-code-block);
-  border-radius: var(--su-size-5s);
-  @include media-query(mobile-l) {
-    font-size: var(--su-size-2s);
-  }
-  & *,
-  & code,
-  & pre {
+@layer component {
+
+  /* -------------------------------
+   *  code
+   * ---------------------------- */
+  .su-code-block {
+    padding: 1em;
     font-family: var(--su-font-monospace);
+    font-weight: bold;
+    font-size: var(--su-size-s);
+    line-height: 1.4;
+    white-space: pre-wrap;
+    word-break: break-word;
+    background: var(--su-color-bg-code-block);
+    color: var(--su-color-text-code-block);
+    border: 1px solid var(--su-color-border-code-block);
+    border-radius: var(--su-size-5s);
+    @include media-query(mobile-l) {
+      font-size: var(--su-size-2s);
+    }
+    & *,
+    & code,
+    & pre {
+      font-family: var(--su-font-monospace);
+    }
   }
-}
-.su-code-inline {
-  display: inline-block;
-  padding: 0.25em;
-  margin-inline: 0.25em;
-  border-radius: var(--su-size-5s);
-  font-family: var(--su-font-monospace);
-  font-weight: bold;
-  font-size: var(--su-size-s);
-  line-height: 1;
-  background: var(--su-color-bg-code-inline);
-  color: var(--su-color-text-code-inline);
-  border: 1px solid var(--su-color-border-code-inline);
-  @include media-query(mobile-l) {
-    font-size: var(--su-size-2s);
-  }
-  & * {
+  .su-code-inline {
+    display: inline-block;
+    padding: 0.25em;
+    margin-inline: 0.25em;
+    border-radius: var(--su-size-5s);
     font-family: var(--su-font-monospace);
+    font-weight: bold;
+    font-size: var(--su-size-s);
+    line-height: 1;
+    background: var(--su-color-bg-code-inline);
+    color: var(--su-color-text-code-inline);
+    border: 1px solid var(--su-color-border-code-inline);
+    @include media-query(mobile-l) {
+      font-size: var(--su-size-2s);
+    }
+    & * {
+      font-family: var(--su-font-monospace);
+    }
   }
+
 }

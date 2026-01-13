@@ -1,149 +1,153 @@
-/* -------------------------------
- *  position
- * ---------------------------- */
-.su-static {
-  position: static;
-}
-.su-relative {
-  position: relative;
-}
-.su-absolute {
-  position: absolute;
-}
-.su-fixed {
-  position: fixed;
-}
-.su-sticky {
-  position: sticky;
-}
+@layer utility {
 
-/* -------------------------------
- *  top
- * ---------------------------- */
-.su-top-auto {
-  top: auto;
-}
-.su-top-0 {
-  top: 0;
-}
-.su-top-25 {
-  top: 25%;
-}
-.su-top-50 {
-  top: 50%;
-}
-.su-top-75 {
-  top: 75%;
-}
-.su-top-100 {
-  top: 100%;
-}
-
-/* -------------------------------
- *  bottom
- * ---------------------------- */
-.su-bottom-auto {
-  bottom: auto;
-}
-.su-bottom-0 {
-  bottom: 0;
-}
-.su-bottom-25 {
-  bottom: 25%;
-}
-.su-bottom-50 {
-  bottom: 50%;
-}
-.su-bottom-75 {
-  bottom: 75%;
-}
-.su-bottom-100 {
-  bottom: 100%;
-}
-
-/* -------------------------------
- *  left
- * ---------------------------- */
-.su-left-auto {
-  left: auto;
-}
-.su-left-0 {
-  left: 0;
-}
-.su-left-25 {
-  left: 25%;
-}
-.su-left-50 {
-  left: 50%;
-}
-.su-left-75 {
-  left: 75%;
-}
-.su-left-100 {
-  left: 100%;
-}
-
-/* -------------------------------
- *  right
- * ---------------------------- */
-.su-right-auto {
-  right: auto;
-}
-.su-right-0 {
-  right: 0;
-}
-.su-right-25 {
-  right: 25%;
-}
-.su-right-50 {
-  right: 50%;
-}
-.su-right-75 {
-  right: 75%;
-}
-.su-right-100 {
-  right: 100%;
-}
-
-/* -------------------------------
- *  layer order
- * ---------------------------- */
-.su-layer-order-fixed {
-  z-index: var(--su-layer-order-fixed);
-}
-.su-layer-order-alert {
-  z-index: var(--su-layer-order-alert);
-}
-.su-layer-order-drawer {
-  z-index: var(--su-layer-order-drawer);
-}
-.su-layer-order-dialog {
-  z-index: var(--su-layer-order-dialog);
-}
-.su-layer-order-loading {
-  z-index: var(--su-layer-order-loading);
-}
-.su-layer-order-infinity {
-  z-index: var(--su-layer-order-infinity);
-}
-.su-z-0 {
-  z-index: 0;
-}
-.su-z-1 {
-  z-index: 1;
-  &-back {
-    z-index: -1;
+  /* -------------------------------
+   *  position
+   * ---------------------------- */
+  .su-static {
+    position: static;
   }
-}
-.su-z-2 {
-  z-index: 2;
-  &-back {
-    z-index: -2;
+  .su-relative {
+    position: relative;
   }
-}
-.su-z-3 {
-  z-index: 3;
-  &-back {
-    z-index: -3;
+  .su-absolute {
+    position: absolute;
   }
+  .su-fixed {
+    position: fixed;
+  }
+  .su-sticky {
+    position: sticky;
+  }
+
+  /* -------------------------------
+   *  top
+   * ---------------------------- */
+  .su-top-auto {
+    top: auto;
+  }
+  .su-top-0 {
+    top: 0;
+  }
+  .su-top-25 {
+    top: 25%;
+  }
+  .su-top-50 {
+    top: 50%;
+  }
+  .su-top-75 {
+    top: 75%;
+  }
+  .su-top-100 {
+    top: 100%;
+  }
+
+  /* -------------------------------
+   *  bottom
+   * ---------------------------- */
+  .su-bottom-auto {
+    bottom: auto;
+  }
+  .su-bottom-0 {
+    bottom: 0;
+  }
+  .su-bottom-25 {
+    bottom: 25%;
+  }
+  .su-bottom-50 {
+    bottom: 50%;
+  }
+  .su-bottom-75 {
+    bottom: 75%;
+  }
+  .su-bottom-100 {
+    bottom: 100%;
+  }
+
+  /* -------------------------------
+   *  left
+   * ---------------------------- */
+  .su-left-auto {
+    left: auto;
+  }
+  .su-left-0 {
+    left: 0;
+  }
+  .su-left-25 {
+    left: 25%;
+  }
+  .su-left-50 {
+    left: 50%;
+  }
+  .su-left-75 {
+    left: 75%;
+  }
+  .su-left-100 {
+    left: 100%;
+  }
+
+  /* -------------------------------
+   *  right
+   * ---------------------------- */
+  .su-right-auto {
+    right: auto;
+  }
+  .su-right-0 {
+    right: 0;
+  }
+  .su-right-25 {
+    right: 25%;
+  }
+  .su-right-50 {
+    right: 50%;
+  }
+  .su-right-75 {
+    right: 75%;
+  }
+  .su-right-100 {
+    right: 100%;
+  }
+
+  /* -------------------------------
+   *  layer order
+   * ---------------------------- */
+  .su-layer-order-fixed {
+    z-index: var(--su-layer-order-fixed);
+  }
+  .su-layer-order-alert {
+    z-index: var(--su-layer-order-alert);
+  }
+  .su-layer-order-drawer {
+    z-index: var(--su-layer-order-drawer);
+  }
+  .su-layer-order-dialog {
+    z-index: var(--su-layer-order-dialog);
+  }
+  .su-layer-order-loading {
+    z-index: var(--su-layer-order-loading);
+  }
+  .su-layer-order-infinity {
+    z-index: var(--su-layer-order-infinity);
+  }
+  .su-z-0 {
+    z-index: 0;
+  }
+  .su-z-1 {
+    z-index: 1;
+    &-back {
+      z-index: -1;
+    }
+  }
+  .su-z-2 {
+    z-index: 2;
+    &-back {
+      z-index: -2;
+    }
+  }
+  .su-z-3 {
+    z-index: 3;
+    &-back {
+      z-index: -3;
+    }
+  }
+
 }

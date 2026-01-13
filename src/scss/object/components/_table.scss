@@ -9,69 +9,60 @@
   --su-min-width-responsive-table: auto;
 }
 
-/* -------------------------------
- *  table
- * ---------------------------- */
-.su-table-border,
-.su-table-fill,
-.su-table-stripe {
-  border-collapse: collapse;
-  width: 100%;
-  caption {
-    margin-bottom: 0.5em;
-  }
-  th,
-  td {
-    padding: 0.5em;
-    text-align: left;
-    vertical-align: top;
-    &.su-table-cell {
-      &-top {
-        vertical-align: top;
-      }
-      &-middle {
-        vertical-align: middle;
-      }
-      &-bottom {
-        vertical-align: bottom;
-      }
+@layer component {
+
+  /* -------------------------------
+   *  table
+   * ---------------------------- */
+  .su-table-border,
+  .su-table-fill,
+  .su-table-stripe {
+    border-collapse: collapse;
+    width: 100%;
+    caption {
+      margin-bottom: 0.5em;
     }
-  }
-  &.su-table-size-small {
-    font-size: 0.8em;
     th,
     td {
-      padding: 0.25em;
-    }
-  }
-  &.su-table-size-large {
-    font-size: 1.2em;
-    th,
-    td {
-      padding: 0.75em;
-    }
-  }
-  &.su-table-column-fixed {
-    table-layout: fixed;
-  }
-}
-.su-table-border {
-  th,
-  td {
-    border-bottom: 1px solid var(--su-color-border-table);
-  }
-  thead {
-    tr {
-      &:last-child {
-        th,
-        td {
-          border-bottom-width: 2px;
+      padding: 0.5em;
+      text-align: left;
+      vertical-align: top;
+      &.su-table-cell {
+        &-top {
+          vertical-align: top;
+        }
+        &-middle {
+          vertical-align: middle;
+        }
+        &-bottom {
+          vertical-align: bottom;
         }
       }
     }
+    &.su-table-size-small {
+      font-size: 0.8em;
+      th,
+      td {
+        padding: 0.25em;
+      }
+    }
+    &.su-table-size-large {
+      font-size: 1.2em;
+      th,
+      td {
+        padding: 0.75em;
+      }
+    }
+    &.su-table-column-fixed {
+      table-layout: fixed;
+    }
   }
-  &:has(tfoot) {
-    tbody {
+  .su-table-border {
+    th,
+    td {
+      border-bottom: 1px solid var(--su-color-border-table);
+    }
+    thead {
       tr {
         &:last-child {
           th,
@@ -81,54 +72,67 @@
         }
       }
     }
-  }
-}
-.su-table-fill {
-  th {
-    background: var(--su-color-fill-table);
-  }
-  th,
-  td {
-    border: 1px solid var(--su-color-border-table);
-  }
-}
-.su-table-stripe {
-  tbody {
-    tr {
-      &:first-child {
-        th,
-        td {
-          border-top: 1px solid var(--su-color-border-table);
-        }
-      }
-      &:last-child {
-        th,
-        td {
-          border-bottom: 1px solid var(--su-color-border-table);
-        }
-      }
-      &:nth-child(odd) {
-        th,
-        td {
-          background: var(--su-color-stripe-odd-table);
-        }
-      }
-      &:nth-child(even) {
-        th,
-        td {
-          background: var(--su-color-stripe-even-table);
+    &:has(tfoot) {
+      tbody {
+        tr {
+          &:last-child {
+            th,
+            td {
+              border-bottom-width: 2px;
+            }
+          }
         }
       }
     }
   }
-}
-
-/* -------------------------------
- *  table wrapper
- * ---------------------------- */
-.su-table-wrap-responsive {
-  overflow-x: auto;
-  & > table {
-    min-width: var(--su-min-width-responsive-table);
+  .su-table-fill {
+    th {
+      background: var(--su-color-fill-table);
+    }
+    th,
+    td {
+      border: 1px solid var(--su-color-border-table);
+    }
   }
+  .su-table-stripe {
+    tbody {
+      tr {
+        &:first-child {
+          th,
+          td {
+            border-top: 1px solid var(--su-color-border-table);
+          }
+        }
+        &:last-child {
+          th,
+          td {
+            border-bottom: 1px solid var(--su-color-border-table);
+          }
+        }
+        &:nth-child(odd) {
+          th,
+          td {
+            background: var(--su-color-stripe-odd-table);
+          }
+        }
+        &:nth-child(even) {
+          th,
+          td {
+            background: var(--su-color-stripe-even-table);
+          }
+        }
+      }
+    }
+  }
+
+  /* -------------------------------
+   *  table wrapper
+   * ---------------------------- */
+  .su-table-wrap-responsive {
+    overflow-x: auto;
+    & > table {
+      min-width: var(--su-min-width-responsive-table);
+    }
+  }
+
 }

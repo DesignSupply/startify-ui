@@ -9,52 +9,56 @@
   --su-color-separator-modal: var(--su-gray-color__mono--2);
 }
 
-/* -------------------------------
- *  icon
- * ---------------------------- */
-.su-modal {
-  margin: auto;
-  box-shadow: 0 var(--su-shadow-elevation-offset-1) var(--su-shadow-elevation-blur-1)
-    var(--su-shadow-elevation-spread-1) var(--su-shadow-elevation-color-1);
-  border-radius: var(--su-size-radius-modal);
-  max-width: calc(100% - calc(var(--su-size-space-outside-modal) * 2));
-  max-height: calc(100% - calc(var(--su-size-space-outside-modal) * 2));
-  overflow: visible;
-  &::backdrop {
-    background: var(--su-color-bg-modal-overlay);
-    -webkit-backdrop-filter: blur(var(--su-size-blur-modal-overlay));
-    backdrop-filter: blur(var(--su-size-blur-modal-overlay));
-  }
-  &.su-modal-full {
-    max-width: none;
-    max-height: none;
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
-    &[open] {
-      display: grid;
-      grid-template-columns: 100%;
-      grid-template-rows: auto minmax(0, 1fr) auto;
+@layer component {
+
+  /* -------------------------------
+   *  modal
+   * ---------------------------- */
+  .su-modal {
+    margin: auto;
+    box-shadow: 0 var(--su-shadow-elevation-offset-1) var(--su-shadow-elevation-blur-1)
+      var(--su-shadow-elevation-spread-1) var(--su-shadow-elevation-color-1);
+    border-radius: var(--su-size-radius-modal);
+    max-width: calc(100% - calc(var(--su-size-space-outside-modal) * 2));
+    max-height: calc(100% - calc(var(--su-size-space-outside-modal) * 2));
+    overflow: visible;
+    &::backdrop {
+      background: var(--su-color-bg-modal-overlay);
+      -webkit-backdrop-filter: blur(var(--su-size-blur-modal-overlay));
+      backdrop-filter: blur(var(--su-size-blur-modal-overlay));
+    }
+    &.su-modal-full {
+      max-width: none;
+      max-height: none;
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+      &[open] {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto minmax(0, 1fr) auto;
+      }
+    }
+    .su-modal-header,
+    .su-modal-content,
+    .su-modal-footer {
+      padding: 1em;
+    }
+    .su-modal-header {
+      font-weight: bold;
+    }
+    .su-modal-footer {
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+    }
+    .su-modal-content {
+      overflow: auto;
+      overscroll-behavior: contain;
+      border-top: 1px solid;
+      border-bottom: 1px solid;
+      border-color: var(--su-color-separator-modal);
     }
   }
-  .su-modal-header,
-  .su-modal-content,
-  .su-modal-footer {
-    padding: 1em;
-  }
-  .su-modal-header {
-    font-weight: bold;
-  }
-  .su-modal-footer {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-  }
-  .su-modal-content {
-    overflow: auto;
-    overscroll-behavior: contain;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-    border-color: var(--su-color-separator-modal);
-  }
+
 }

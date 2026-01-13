@@ -10,91 +10,95 @@
   --su-size-radius-selectbox: var(--su-size-5s);
 }
 
-/* -------------------------------
- *  selectbox
- * ---------------------------- */
-.su-form-selectbox {
-  border: 1px solid var(--su-color-border-selectbox);
-  border-radius: var(--su-size-radius-selectbox);
-  color: var(--su-color-text-selectbox);
-  max-width: 100%;
-  display: inline-block;
-  overflow: hidden;
-  vertical-align: bottom;
-  select {
-    appearance: none;
-    &:focus-visible {
-      outline: none;
-    }
-  }
-  &:not(:has(select[multiple])) {
-    position: relative;
-    &::before,
-    &::after {
-      content: '';
-      width: 12px;
-      height: 2px;
-      border-radius: 1px;
-      background: var(--su-color-icon-selectbox);
-      position: absolute;
-      top: calc(50% - 1px);
-      right: 1em;
-    }
-    &::before {
-      rotate: 45deg;
-      translate: -31% 0;
-    }
-    &::after {
-      rotate: -45deg;
-      translate: 31% 0;
-    }
+@layer component {
+
+  /* -------------------------------
+   *  selectbox
+   * ---------------------------- */
+  .su-form-selectbox {
+    border: 1px solid var(--su-color-border-selectbox);
+    border-radius: var(--su-size-radius-selectbox);
+    color: var(--su-color-text-selectbox);
+    max-width: 100%;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: bottom;
     select {
-      padding: 0.5em 3em 0.5em 1em;
-    }
-  }
-  &:has(select:focus-visible) {
-    outline: 1px solid var(--su-color-border-selectbox);
-  }
-  &:has(select[multiple]) {
-    select {
-      padding: 0.5em 1em 0.5em 1em;
-    }
-    option {
-      padding: 0 0 0 1.75em;
-      margin: 0.5em 0.5em 0.5em 0;
-      &:first-child {
-        margin-top: 0;
-      }
-      &:last-child {
-        margin-bottom: 0;
-      }
-      &:checked {
-        position: relative;
-        background: var(--su-status-color__success--0);
-        &::before {
-          content: '\e90f';
-          font-family: 'startify-ui icons';
-          position: absolute;
-          left: 0;
-          top: 0;
-          font-size: 1lh;
-          color: var(--su-status-color__success--4);
-        }
+      appearance: none;
+      &:focus-visible {
+        outline: none;
       }
     }
-    optgroup {
-      margin: 0.5em 0.5em 0.5em 0;
-      padding: 0.5em 0 0 0;
-      border-top: 1px dotted var(--su-color-border-selectbox);
+    &:not(:has(select[multiple])) {
+      position: relative;
+      &::before,
+      &::after {
+        content: '';
+        width: 12px;
+        height: 2px;
+        border-radius: 1px;
+        background: var(--su-color-icon-selectbox);
+        position: absolute;
+        top: calc(50% - 1px);
+        right: 1em;
+      }
+      &::before {
+        rotate: 45deg;
+        translate: -31% 0;
+      }
+      &::after {
+        rotate: -45deg;
+        translate: 31% 0;
+      }
+      select {
+        padding: 0.5em 3em 0.5em 1em;
+      }
+    }
+    &:has(select:focus-visible) {
+      outline: 1px solid var(--su-color-border-selectbox);
+    }
+    &:has(select[multiple]) {
+      select {
+        padding: 0.5em 1em 0.5em 1em;
+      }
       option {
-        margin: 0.5em 0;
+        padding: 0 0 0 1.75em;
+        margin: 0.5em 0.5em 0.5em 0;
         &:first-child {
-          margin-top: 0.5em;
+          margin-top: 0;
         }
         &:last-child {
           margin-bottom: 0;
         }
+        &:checked {
+          position: relative;
+          background: var(--su-status-color__success--0);
+          &::before {
+            content: '\e90f';
+            font-family: 'startify-ui icons';
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1lh;
+            color: var(--su-status-color__success--4);
+          }
+        }
+      }
+      optgroup {
+        margin: 0.5em 0.5em 0.5em 0;
+        padding: 0.5em 0 0 0;
+        border-top: 1px dotted var(--su-color-border-selectbox);
+        option {
+          margin: 0.5em 0;
+          &:first-child {
+            margin-top: 0.5em;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
       }
     }
   }
+
 }

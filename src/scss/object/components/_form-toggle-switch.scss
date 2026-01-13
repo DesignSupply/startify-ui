@@ -13,70 +13,74 @@
   --su-size-radius-toggle-switch: calc(var(--su-size-toggle-switch) / 2);
 }
 
-/* -------------------------------
- *  toggle-switch
- * ---------------------------- */
-.su-form-toggle-switch {
-  appearance: none;
-  width: calc(var(--su-size-toggle-switch) * 2);
-  height: var(--su-size-toggle-switch);
-  border-radius: var(--su-size-radius-toggle-switch);
-  position: relative;
-  background: var(--su-color-bg-toggle-switch);
-  transition: transition(background);
-  font-size: inherit;
-  &::before {
-    content: '';
-    position: absolute;
-    left: 4px;
-    top: 4px;
-    display: block;
-    width: calc(50% - 8px);
-    height: calc(100% - 8px);
-    background: var(--su-color-white);
+@layer component {
+
+  /* -------------------------------
+   *  toggle-switch
+   * ---------------------------- */
+  .su-form-toggle-switch {
+    appearance: none;
+    width: calc(var(--su-size-toggle-switch) * 2);
+    height: var(--su-size-toggle-switch);
     border-radius: var(--su-size-radius-toggle-switch);
-    transition: transition(transform);
-    box-shadow: 0 0 0 2px rgb(0 0 0 / 0.05);
-  }
-  &:focus-visible,
-  &.su-form-toggle-switch-state-focus {
-    outline: 2px solid var(--su-color-border-toggle-switch-focus);
-    outline-offset: 0px;
-  }
-  &:checked,
-  &.su-form-toggle-switch-state-checked {
-    background: var(--su-color-bg-toggle-switch-checked);
+    position: relative;
+    background: var(--su-color-bg-toggle-switch);
+    transition: transition(background);
+    font-size: inherit;
     &::before {
-      transform: translate(calc(100% + 8px), 0);
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      display: block;
+      width: calc(50% - 8px);
+      height: calc(100% - 8px);
+      background: var(--su-color-white);
+      border-radius: var(--su-size-radius-toggle-switch);
+      transition: transition(transform);
+      box-shadow: 0 0 0 2px rgb(0 0 0 / 0.05);
     }
-  }
-  &.su-form-toggle-switch-state-hover {
-    outline: 4px solid var(--su-color-border-toggle-switch-hover);
-    outline-offset: 0px;
-  }
-  @include hover-style() {
-    outline: 4px solid var(--su-color-border-toggle-switch-hover);
-    outline-offset: 0px;
-    cursor: pointer;
-  }
-  &:disabled,
-  &.su-form-toggle-switch-state-disabled {
+    &:focus-visible,
+    &.su-form-toggle-switch-state-focus {
+      outline: 2px solid var(--su-color-border-toggle-switch-focus);
+      outline-offset: 0px;
+    }
+    &:checked,
+    &.su-form-toggle-switch-state-checked {
+      background: var(--su-color-bg-toggle-switch-checked);
+      &::before {
+        transform: translate(calc(100% + 8px), 0);
+      }
+    }
+    &.su-form-toggle-switch-state-hover {
+      outline: 4px solid var(--su-color-border-toggle-switch-hover);
+      outline-offset: 0px;
+    }
     @include hover-style() {
-      outline: none;
+      outline: 4px solid var(--su-color-border-toggle-switch-hover);
+      outline-offset: 0px;
+      cursor: pointer;
+    }
+    &:disabled,
+    &.su-form-toggle-switch-state-disabled {
+      @include hover-style() {
+        outline: none;
+      }
     }
   }
-}
-label {
-  &:has(> .su-form-toggle-switch) {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    align-items: center;
-    column-gap: 0.5em;
-    width: fit-content;
+  label {
+    &:has(> .su-form-toggle-switch) {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      align-items: center;
+      column-gap: 0.5em;
+      width: fit-content;
+    }
+    &:has(> .su-form-toggle-switch:disabled),
+    &:has(> .su-form-toggle-switch.su-form-toggle-switch-state-disabled) {
+      opacity: 0.2;
+      filter: grayscale(1);
+    }
   }
-  &:has(> .su-form-toggle-switch:disabled),
-  &:has(> .su-form-toggle-switch.su-form-toggle-switch-state-disabled) {
-    opacity: 0.2;
-    filter: grayscale(1);
-  }
+
 }

@@ -20,131 +20,135 @@
   --su-suffix-range-output-multiple-max: '）';
 }
 
-/* -------------------------------
- *  range input
- * ---------------------------- */
-.su-form-range-input {
-  width: var(--su-width-default-range-input);
-  max-width: 100%;
-  appearance: none;
-  background-color: var(--su-color-bg-bar-range-input);
-  border-radius: 99em;
-  box-shadow: 0 0 4px 0 rgb(0 0 0 / 15%) inset;
-  // pointer-events: none;
-  &::-webkit-slider-thumb {
-    appearance: none;
-    width: var(--su-size-button-range-input);
-    height: var(--su-size-button-range-input);
-    background-color: var(--su-color-bg-button-range-input);
-    border-radius: 50%;
-    border: 1px solid var(--su-color-border-range-input);
-    position: relative;
-  }
-  &:focus-visible,
-  &.su-form-range-input-state-focus {
-    outline: 2px solid var(--su-color-border-range-input-focus);
-    outline-offset: 0px;
-  }
-  &.su-form-range-input-state-hover {
-    outline: 4px solid var(--su-color-border-range-input-hover);
-    outline-offset: 0px;
-  }
-  @include hover-style() {
-    outline: 4px solid var(--su-color-border-range-input-hover);
-    outline-offset: 0px;
-    cursor: pointer;
-  }
-  &:disabled,
-  &.su-form-range-input-state-disabled {
-    @include hover-style() {
-      outline: none;
-    }
-  }
-}
-label:has(> .su-form-range-input) {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-items: center;
-  column-gap: 0.5em;
-  row-gap: 0.5em;
-  width: fit-content;
-  &:has(> .su-form-range-input:disabled),
-  &:has(> .su-form-range-input.su-form-range-input-state-disabled) {
-    opacity: 0.2;
-    filter: grayscale(1);
-  }
-}
-.su-form-range-output {
-  display: inline-block;
-  &::before {
-    content: var(--su-prefix-range-output);
-  }
-  &::after {
-    content: var(--su-suffix-range-output);
-  }
-}
+@layer component {
 
-/* -------------------------------
- *  range input multiple
- * ---------------------------- */
-.su-form-range-input-multiple {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-template-rows: repeat(1, auto);
-  & > .su-form-range-input {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    pointer-events: none;
+  /* -------------------------------
+   *  range input
+   * ---------------------------- */
+  .su-form-range-input {
+    width: var(--su-width-default-range-input);
+    max-width: 100%;
+    appearance: none;
+    background-color: var(--su-color-bg-bar-range-input);
+    border-radius: 99em;
+    box-shadow: 0 0 4px 0 rgb(0 0 0 / 15%) inset;
+    // pointer-events: none;
     &::-webkit-slider-thumb {
-      pointer-events: auto;
+      appearance: none;
+      width: var(--su-size-button-range-input);
+      height: var(--su-size-button-range-input);
+      background-color: var(--su-color-bg-button-range-input);
+      border-radius: 50%;
+      border: 1px solid var(--su-color-border-range-input);
+      position: relative;
     }
-  }
-}
-.su-form-range-input-multiple-min {
-  background: none;
-  box-shadow: none;
-  &:focus-visible,
-  &.su-form-range-input-state-focus {
-    outline: none;
-    outline-offset: 0px;
-  }
-  &:disabled,
-  &.su-form-range-input-state-disabled {
+    &:focus-visible,
+    &.su-form-range-input-state-focus {
+      outline: 2px solid var(--su-color-border-range-input-focus);
+      outline-offset: 0px;
+    }
+    &.su-form-range-input-state-hover {
+      outline: 4px solid var(--su-color-border-range-input-hover);
+      outline-offset: 0px;
+    }
     @include hover-style() {
-      outline: none;
+      outline: 4px solid var(--su-color-border-range-input-hover);
+      outline-offset: 0px;
+      cursor: pointer;
+    }
+    &:disabled,
+    &.su-form-range-input-state-disabled {
+      @include hover-style() {
+        outline: none;
+      }
     }
   }
-}
-*:has(> .su-form-range-input-multiple) {
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  grid-template-rows: repeat(1, auto);
-  row-gap: 0.25em;
-}
-.su-form-range-output-multiple-min,
-.su-form-range-output-multiple-max {
-  display: inline-block;
-}
-.su-form-range-output-multiple-min {
-  &::before {
-    content: var(--su-prefix-range-output-multiple-min);
+  label:has(> .su-form-range-input) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    column-gap: 0.5em;
+    row-gap: 0.5em;
+    width: fit-content;
+    &:has(> .su-form-range-input:disabled),
+    &:has(> .su-form-range-input.su-form-range-input-state-disabled) {
+      opacity: 0.2;
+      filter: grayscale(1);
+    }
   }
-  &::after {
-    content: var(--su-suffix-range-output-multiple-min);
+  .su-form-range-output {
+    display: inline-block;
+    &::before {
+      content: var(--su-prefix-range-output);
+    }
+    &::after {
+      content: var(--su-suffix-range-output);
+    }
   }
-}
-.su-form-range-output-multiple-max {
-  &::before {
-    content: var(--su-prefix-range-output-multiple-max);
+
+  /* -------------------------------
+   *  range input multiple
+   * ---------------------------- */
+  .su-form-range-input-multiple {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(1, auto);
+    & > .su-form-range-input {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      pointer-events: none;
+      &::-webkit-slider-thumb {
+        pointer-events: auto;
+      }
+    }
   }
-  &::after {
-    content: var(--su-suffix-range-output-multiple-max);
+  .su-form-range-input-multiple-min {
+    background: none;
+    box-shadow: none;
+    &:focus-visible,
+    &.su-form-range-input-state-focus {
+      outline: none;
+      outline-offset: 0px;
+    }
+    &:disabled,
+    &.su-form-range-input-state-disabled {
+      @include hover-style() {
+        outline: none;
+      }
+    }
   }
-}
-label:has(> .su-form-range-input-multiple) {
-  &:has(.su-form-range-input:disabled),
-  &:has(.su-form-range-input.su-form-range-input-state-disabled) {
-    opacity: 0.2;
-    filter: grayscale(1);
+  *:has(> .su-form-range-input-multiple) {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-rows: repeat(1, auto);
+    row-gap: 0.25em;
   }
+  .su-form-range-output-multiple-min,
+  .su-form-range-output-multiple-max {
+    display: inline-block;
+  }
+  .su-form-range-output-multiple-min {
+    &::before {
+      content: var(--su-prefix-range-output-multiple-min);
+    }
+    &::after {
+      content: var(--su-suffix-range-output-multiple-min);
+    }
+  }
+  .su-form-range-output-multiple-max {
+    &::before {
+      content: var(--su-prefix-range-output-multiple-max);
+    }
+    &::after {
+      content: var(--su-suffix-range-output-multiple-max);
+    }
+  }
+  label:has(> .su-form-range-input-multiple) {
+    &:has(.su-form-range-input:disabled),
+    &:has(.su-form-range-input.su-form-range-input-state-disabled) {
+      opacity: 0.2;
+      filter: grayscale(1);
+    }
+  }
+
 }

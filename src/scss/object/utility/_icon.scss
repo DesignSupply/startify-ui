@@ -8,146 +8,155 @@
 /* -------------------------------
  *  icon
  * ---------------------------- */
-[class^='su-icon-'] {
-  width: 1em;
-  height: 1em;
-  display: inline-block;
-  // vertical-align: baseline;
-  vertical-align: middle;
-  position: relative;
-  &::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    font-family: 'startify-ui icons';
-    color: var(--su-color-icon-text);
-    line-height: 1;
+@layer component {
+
+  [class^='su-icon-'] {
+    width: 1em;
+    height: 1em;
     display: inline-block;
-    left: 0;
-    // top: 12.5%;
-    top: 0;
-    position: absolute;
+    // vertical-align: baseline;
+    vertical-align: middle;
+    position: relative;
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      font-family: 'startify-ui icons';
+      color: var(--su-color-icon-text);
+      line-height: 1;
+      display: inline-block;
+      left: 0;
+      // top: 12.5%;
+      top: 0;
+      position: absolute;
+    }
   }
+
 }
-.su-icon {
-  &-user {
-    &::before {
-      content: '\e912';
+
+@layer utility {
+
+  .su-icon {
+    &-user {
+      &::before {
+        content: '\e912';
+      }
+    }
+    &-error {
+      &::before {
+        content: '\e908';
+      }
+    }
+    &-warning {
+      &::before {
+        content: '\e913';
+      }
+    }
+    &-success {
+      &::before {
+        content: '\e90f';
+      }
+    }
+    &-info {
+      &::before {
+        content: '\e909';
+      }
+    }
+    &-close {
+      &::before {
+        content: '\e902';
+      }
+    }
+    &-add {
+      &::before {
+        content: '\e900';
+      }
+    }
+    &-delete {
+      &::before {
+        content: '\e904';
+      }
+    }
+    &-email {
+      &::before {
+        content: '\e907';
+      }
+    }
+    &-time {
+      &::before {
+        content: '\e910';
+      }
+    }
+    &-date {
+      &::before {
+        content: '\e903';
+      }
+    }
+    &-power {
+      &::before {
+        content: '\e90d';
+      }
+    }
+    &-document {
+      &::before {
+        content: '\e905';
+      }
+    }
+    &-download {
+      &::before {
+        content: '\e906';
+      }
+    }
+    &-upload {
+      &::before {
+        content: '\e911';
+      }
+    }
+    &-bell {
+      &::before {
+        content: '\e901';
+      }
+    }
+    &-search {
+      &::before {
+        content: '\e90e';
+      }
+    }
+    &-phone {
+      &::before {
+        content: '\e90c';
+      }
+    }
+    &-link {
+      &::before {
+        content: '\e90a';
+      }
+    }
+    &-lock {
+      &::before {
+        content: '\e90b';
+      }
+    }
+    &-up {
+      &::before {
+        content: '\e914';
+      }
+    }
+    &-down {
+      &::before {
+        content: '\e915';
+      }
+    }
+    &-left {
+      &::before {
+        content: '\e916';
+      }
+    }
+    &-right {
+      &::before {
+        content: '\e917';
+      }
     }
   }
-  &-error {
-    &::before {
-      content: '\e908';
-    }
-  }
-  &-warning {
-    &::before {
-      content: '\e913';
-    }
-  }
-  &-success {
-    &::before {
-      content: '\e90f';
-    }
-  }
-  &-info {
-    &::before {
-      content: '\e909';
-    }
-  }
-  &-close {
-    &::before {
-      content: '\e902';
-    }
-  }
-  &-add {
-    &::before {
-      content: '\e900';
-    }
-  }
-  &-delete {
-    &::before {
-      content: '\e904';
-    }
-  }
-  &-email {
-    &::before {
-      content: '\e907';
-    }
-  }
-  &-time {
-    &::before {
-      content: '\e910';
-    }
-  }
-  &-date {
-    &::before {
-      content: '\e903';
-    }
-  }
-  &-power {
-    &::before {
-      content: '\e90d';
-    }
-  }
-  &-document {
-    &::before {
-      content: '\e905';
-    }
-  }
-  &-download {
-    &::before {
-      content: '\e906';
-    }
-  }
-  &-upload {
-    &::before {
-      content: '\e911';
-    }
-  }
-  &-bell {
-    &::before {
-      content: '\e901';
-    }
-  }
-  &-search {
-    &::before {
-      content: '\e90e';
-    }
-  }
-  &-phone {
-    &::before {
-      content: '\e90c';
-    }
-  }
-  &-link {
-    &::before {
-      content: '\e90a';
-    }
-  }
-  &-lock {
-    &::before {
-      content: '\e90b';
-    }
-  }
-  &-up {
-    &::before {
-      content: '\e914';
-    }
-  }
-  &-down {
-    &::before {
-      content: '\e915';
-    }
-  }
-  &-left {
-    &::before {
-      content: '\e916';
-    }
-  }
-  &-right {
-    &::before {
-      content: '\e917';
-    }
-  }
+
 }

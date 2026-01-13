@@ -20,7 +20,11 @@ $default-container-name: 'container-query';
 /* -------------------------------
  *  container query
  * ---------------------------- */
-.su-container-query {
-  container-type: var(--su-container-query-type);
-  container-name: var(--su-container-query-name);
+@layer foundation {
+
+  .su-container-query {
+    container-type: var(--su-container-query-type);
+    container-name: var(--su-container-query-name);
+  }
+  
 }

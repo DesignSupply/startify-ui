@@ -1,55 +1,59 @@
 @use '../../foundation/import' as *;
 
-/* -------------------------------
- *  quote
- * ---------------------------- */
-.su-quote-block {
-  padding: 1em 1em 1em 1.5em;
-  font-style: var(--su-font-italic);
-  line-height: 1.4;
-  word-break: break-word;
-  background: var(--su-gray-color__mono--1);
-  border-left: 2px solid var(--su-gray-color__mono--3);
-  font-size: var(--su-size-r);
-  @include media-query(mobile-l) {
-    font-size: var(--su-size-s);
+@layer component {
+
+  /* -------------------------------
+   *  quote
+   * ---------------------------- */
+  .su-quote-block {
+    padding: 1em 1em 1em 1.5em;
+    font-style: var(--su-font-italic);
+    line-height: 1.4;
+    word-break: break-word;
+    background: var(--su-gray-color__mono--1);
+    border-left: 2px solid var(--su-gray-color__mono--3);
+    font-size: var(--su-size-r);
+    @include media-query(mobile-l) {
+      font-size: var(--su-size-s);
+    }
+    & > *:not(cite) {
+      &::before {
+        content: '“';
+        padding: 0 0.5em 0 0;
+      }
+      &::after {
+        content: '”';
+        padding: 0 0 0 0.5em;
+      }
+    }
+    cite {
+      display: block;
+      margin-top: 1em;
+      padding-top: 1em;
+      border-top: 1px solid var(--su-gray-color__mono--2);
+      text-align: right;
+      font-size: 0.8em;
+    }
   }
-  & > *:not(cite) {
+  .su-quote-inline {
+    display: inline;
+    padding: 0.25em 0.5em;
+    margin-inline: 0.25em;
+    font-size: 1em;
+    font-style: var(--su-font-italic);
+    line-height: 1;
+    background: var(--su-gray-color__mono--1);
+    @include media-query(mobile-l) {
+      font-size: var(--su-size-2s);
+    }
     &::before {
       content: '“';
-      padding: 0 0.5em 0 0;
+      padding: 0 0.25em 0 0;
     }
     &::after {
       content: '”';
-      padding: 0 0 0 0.5em;
+      padding: 0 0 0 0.25em;
     }
   }
-  cite {
-    display: block;
-    margin-top: 1em;
-    padding-top: 1em;
-    border-top: 1px solid var(--su-gray-color__mono--2);
-    text-align: right;
-    font-size: 0.8em;
-  }
-}
-.su-quote-inline {
-  display: inline;
-  padding: 0.25em 0.5em;
-  margin-inline: 0.25em;
-  font-size: 1em;
-  font-style: var(--su-font-italic);
-  line-height: 1;
-  background: var(--su-gray-color__mono--1);
-  @include media-query(mobile-l) {
-    font-size: var(--su-size-2s);
-  }
-  &::before {
-    content: '“';
-    padding: 0 0.25em 0 0;
-  }
-  &::after {
-    content: '”';
-    padding: 0 0 0 0.25em;
-  }
+
 }

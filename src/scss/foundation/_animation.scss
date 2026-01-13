@@ -22,7 +22,7 @@
 /* -------------------------------
  *  keyframes
  * ---------------------------- */
- @keyframes rotation {
+@keyframes rotation {
   from {
     --su-property-degree: 0deg;
   }
@@ -403,39 +403,44 @@ $easing-list: (
   --su-easing-steps-8: #{map.get($easing-list, steps-8)};
   --su-easing-steps-10: #{map.get($easing-list, steps-10)};
 }
-.su-easing-ease-in-elastic,
-.su-easing-ease-out-elastic,
-.su-easing-ease-inout-elastic,
-.su-easing-ease-in-bounce,
-.su-easing-ease-out-bounce,
-.su-easing-ease-inout-bounce {
-  animation-name: progress;
-  animation-timing-function: linear;
-}
-.su-easing-ease-in-bounce,
-.su-easing-ease-out-bounce,
-.su-easing-ease-inout-bounce {
-  --su-easing-bounce-n1: 7.5625;
-  --su-easing-bounce-d1: 2.75;
-  --su-easing-bounce-amplitude: 1;
-}
-.su-easing-ease-in-elastic {
-  --su-easing-ease-in-elastic: #{map.get($easing-list, ease-in-elastic)};
-}
-.su-easing-ease-out-elastic {
-  --su-easing-ease-out-elastic: #{map.get($easing-list, ease-out-elastic)};
-}
-.su-easing-ease-inout-elastic {
-  --su-easing-ease-inout-elastic: #{map.get($easing-list, ease-inout-elastic)};
-}
-.su-easing-ease-in-bounce {
-  --su-easing-ease-in-bounce: #{map.get($easing-list, ease-in-bounce)};
-}
-.su-easing-ease-out-bounce {
-  --su-easing-ease-out-bounce: #{map.get($easing-list, ease-out-bounce)};
-}
-.su-easing-ease-inout-bounce {
-  --su-easing-ease-inout-bounce: #{map.get($easing-list, ease-inout-bounce)};
+
+@layer foundation {
+
+  .su-easing-ease-in-elastic,
+  .su-easing-ease-out-elastic,
+  .su-easing-ease-inout-elastic,
+  .su-easing-ease-in-bounce,
+  .su-easing-ease-out-bounce,
+  .su-easing-ease-inout-bounce {
+    animation-name: progress;
+    animation-timing-function: linear;
+  }
+  .su-easing-ease-in-bounce,
+  .su-easing-ease-out-bounce,
+  .su-easing-ease-inout-bounce {
+    --su-easing-bounce-n1: 7.5625;
+    --su-easing-bounce-d1: 2.75;
+    --su-easing-bounce-amplitude: 1;
+  }
+  .su-easing-ease-in-elastic {
+    --su-easing-ease-in-elastic: #{map.get($easing-list, ease-in-elastic)};
+  }
+  .su-easing-ease-out-elastic {
+    --su-easing-ease-out-elastic: #{map.get($easing-list, ease-out-elastic)};
+  }
+  .su-easing-ease-inout-elastic {
+    --su-easing-ease-inout-elastic: #{map.get($easing-list, ease-inout-elastic)};
+  }
+  .su-easing-ease-in-bounce {
+    --su-easing-ease-in-bounce: #{map.get($easing-list, ease-in-bounce)};
+  }
+  .su-easing-ease-out-bounce {
+    --su-easing-ease-out-bounce: #{map.get($easing-list, ease-out-bounce)};
+  }
+  .su-easing-ease-inout-bounce {
+    --su-easing-ease-inout-bounce: #{map.get($easing-list, ease-inout-bounce)};
+  }
+  
 }
 
 /* -------------------------------

@@ -1,161 +1,165 @@
-/* -------------------------------
- *  dropshadow box
- * ---------------------------- */
-.su-shadow-box {
-  box-shadow: var(--su-shadow-elevation-offset-0) var(--su-shadow-elevation-offset-2) var(--su-shadow-elevation-blur-2)
-    var(--su-shadow-elevation-spread-2) var(--su-shadow-elevation-color-2);
-  &-0,
-  &-none {
-    box-shadow: var(--su-shadow-elevation-offset-0) var(--su-shadow-elevation-offset-0)
-      var(--su-shadow-elevation-blur-0) var(--su-shadow-elevation-spread-0) var(--su-shadow-elevation-color-0);
-  }
-  &-1,
-  &-low {
-    box-shadow: var(--su-shadow-elevation-offset-0) var(--su-shadow-elevation-offset-1)
-      var(--su-shadow-elevation-blur-1) var(--su-shadow-elevation-spread-1) var(--su-shadow-elevation-color-1);
-  }
-  &-2,
-  &-medium {
-    box-shadow: var(--su-shadow-elevation-offset-0) var(--su-shadow-elevation-offset-2)
-      var(--su-shadow-elevation-blur-2) var(--su-shadow-elevation-spread-2) var(--su-shadow-elevation-color-2);
-  }
-  &-3,
-  &-high {
-    box-shadow: var(--su-shadow-elevation-offset-0) var(--su-shadow-elevation-offset-3)
-      var(--su-shadow-elevation-blur-3) var(--su-shadow-elevation-spread-3) var(--su-shadow-elevation-color-3);
-  }
-  &-4,
-  &-highest {
-    box-shadow: var(--su-shadow-elevation-offset-0) var(--su-shadow-elevation-offset-4)
-      var(--su-shadow-elevation-blur-4) var(--su-shadow-elevation-spread-4) var(--su-shadow-elevation-color-4);
-  }
-  &-right-bottom {
-    box-shadow: var(--su-shadow-elevation-offset-2) var(--su-shadow-elevation-offset-2)
-      var(--su-shadow-elevation-blur-2) var(--su-shadow-elevation-spread-2) var(--su-shadow-elevation-color-2);
+@layer utility {
+
+  /* -------------------------------
+   *  dropshadow box
+   * ---------------------------- */
+  .su-shadow-box {
+    box-shadow: var(--su-shadow-elevation-offset-0) var(--su-shadow-elevation-offset-2) var(--su-shadow-elevation-blur-2)
+      var(--su-shadow-elevation-spread-2) var(--su-shadow-elevation-color-2);
+    &-0,
+    &-none {
+      box-shadow: var(--su-shadow-elevation-offset-0) var(--su-shadow-elevation-offset-0)
+        var(--su-shadow-elevation-blur-0) var(--su-shadow-elevation-spread-0) var(--su-shadow-elevation-color-0);
+    }
     &-1,
     &-low {
-      box-shadow: var(--su-shadow-elevation-offset-1) var(--su-shadow-elevation-offset-1)
+      box-shadow: var(--su-shadow-elevation-offset-0) var(--su-shadow-elevation-offset-1)
         var(--su-shadow-elevation-blur-1) var(--su-shadow-elevation-spread-1) var(--su-shadow-elevation-color-1);
     }
     &-2,
     &-medium {
+      box-shadow: var(--su-shadow-elevation-offset-0) var(--su-shadow-elevation-offset-2)
+        var(--su-shadow-elevation-blur-2) var(--su-shadow-elevation-spread-2) var(--su-shadow-elevation-color-2);
+    }
+    &-3,
+    &-high {
+      box-shadow: var(--su-shadow-elevation-offset-0) var(--su-shadow-elevation-offset-3)
+        var(--su-shadow-elevation-blur-3) var(--su-shadow-elevation-spread-3) var(--su-shadow-elevation-color-3);
+    }
+    &-4,
+    &-highest {
+      box-shadow: var(--su-shadow-elevation-offset-0) var(--su-shadow-elevation-offset-4)
+        var(--su-shadow-elevation-blur-4) var(--su-shadow-elevation-spread-4) var(--su-shadow-elevation-color-4);
+    }
+    &-right-bottom {
       box-shadow: var(--su-shadow-elevation-offset-2) var(--su-shadow-elevation-offset-2)
         var(--su-shadow-elevation-blur-2) var(--su-shadow-elevation-spread-2) var(--su-shadow-elevation-color-2);
+      &-1,
+      &-low {
+        box-shadow: var(--su-shadow-elevation-offset-1) var(--su-shadow-elevation-offset-1)
+          var(--su-shadow-elevation-blur-1) var(--su-shadow-elevation-spread-1) var(--su-shadow-elevation-color-1);
+      }
+      &-2,
+      &-medium {
+        box-shadow: var(--su-shadow-elevation-offset-2) var(--su-shadow-elevation-offset-2)
+          var(--su-shadow-elevation-blur-2) var(--su-shadow-elevation-spread-2) var(--su-shadow-elevation-color-2);
+      }
+      &-3,
+      &-high {
+        box-shadow: var(--su-shadow-elevation-offset-3) var(--su-shadow-elevation-offset-3)
+          var(--su-shadow-elevation-blur-3) var(--su-shadow-elevation-spread-3) var(--su-shadow-elevation-color-3);
+      }
+      &-4,
+      &-highest {
+        box-shadow: var(--su-shadow-elevation-offset-4) var(--su-shadow-elevation-offset-4)
+          var(--su-shadow-elevation-blur-4) var(--su-shadow-elevation-spread-4) var(--su-shadow-elevation-color-4);
+      }
     }
-    &-3,
-    &-high {
-      box-shadow: var(--su-shadow-elevation-offset-3) var(--su-shadow-elevation-offset-3)
-        var(--su-shadow-elevation-blur-3) var(--su-shadow-elevation-spread-3) var(--su-shadow-elevation-color-3);
-    }
-    &-4,
-    &-highest {
-      box-shadow: var(--su-shadow-elevation-offset-4) var(--su-shadow-elevation-offset-4)
-        var(--su-shadow-elevation-blur-4) var(--su-shadow-elevation-spread-4) var(--su-shadow-elevation-color-4);
-    }
-  }
-  &-left-bottom {
-    box-shadow: calc(var(--su-shadow-elevation-offset-2) * -1) var(--su-shadow-elevation-offset-2)
-      var(--su-shadow-elevation-blur-2) var(--su-shadow-elevation-spread-2) var(--su-shadow-elevation-color-2);
-    &-1,
-    &-low {
-      box-shadow: calc(var(--su-shadow-elevation-offset-1) * -1) var(--su-shadow-elevation-offset-1)
-        var(--su-shadow-elevation-blur-1) var(--su-shadow-elevation-spread-1) var(--su-shadow-elevation-color-1);
-    }
-    &-2,
-    &-medium {
+    &-left-bottom {
       box-shadow: calc(var(--su-shadow-elevation-offset-2) * -1) var(--su-shadow-elevation-offset-2)
         var(--su-shadow-elevation-blur-2) var(--su-shadow-elevation-spread-2) var(--su-shadow-elevation-color-2);
-    }
-    &-3,
-    &-high {
-      box-shadow: calc(var(--su-shadow-elevation-offset-3) * -1) var(--su-shadow-elevation-offset-3)
-        var(--su-shadow-elevation-blur-3) var(--su-shadow-elevation-spread-3) var(--su-shadow-elevation-color-3);
-    }
-    &-4,
-    &-highest {
-      box-shadow: calc(var(--su-shadow-elevation-offset-4) * -1) var(--su-shadow-elevation-offset-4)
-        var(--su-shadow-elevation-blur-4) var(--su-shadow-elevation-spread-4) var(--su-shadow-elevation-color-4);
+      &-1,
+      &-low {
+        box-shadow: calc(var(--su-shadow-elevation-offset-1) * -1) var(--su-shadow-elevation-offset-1)
+          var(--su-shadow-elevation-blur-1) var(--su-shadow-elevation-spread-1) var(--su-shadow-elevation-color-1);
+      }
+      &-2,
+      &-medium {
+        box-shadow: calc(var(--su-shadow-elevation-offset-2) * -1) var(--su-shadow-elevation-offset-2)
+          var(--su-shadow-elevation-blur-2) var(--su-shadow-elevation-spread-2) var(--su-shadow-elevation-color-2);
+      }
+      &-3,
+      &-high {
+        box-shadow: calc(var(--su-shadow-elevation-offset-3) * -1) var(--su-shadow-elevation-offset-3)
+          var(--su-shadow-elevation-blur-3) var(--su-shadow-elevation-spread-3) var(--su-shadow-elevation-color-3);
+      }
+      &-4,
+      &-highest {
+        box-shadow: calc(var(--su-shadow-elevation-offset-4) * -1) var(--su-shadow-elevation-offset-4)
+          var(--su-shadow-elevation-blur-4) var(--su-shadow-elevation-spread-4) var(--su-shadow-elevation-color-4);
+      }
     }
   }
-}
 
-/* -------------------------------
- *  dropshadow text
- * ---------------------------- */
-.su-shadow-text {
-  text-shadow: var(--su-shadow-elevation-offset-0) var(--su-shadow-elevation-offset-2) var(--su-shadow-elevation-blur-2)
-    var(--su-shadow-elevation-color-2);
-  &-0,
-  &-none {
-    text-shadow: var(--su-shadow-elevation-offset-0) var(--su-shadow-elevation-offset-0)
-      var(--su-shadow-elevation-blur-0) var(--su-shadow-elevation-color-0);
-  }
-  &-1,
-  &-low {
-    text-shadow: var(--su-shadow-elevation-offset-0) var(--su-shadow-elevation-offset-1)
-      var(--su-shadow-elevation-blur-1) var(--su-shadow-elevation-color-1);
-  }
-  &-2,
-  &-medium {
-    text-shadow: var(--su-shadow-elevation-offset-0) var(--su-shadow-elevation-offset-2)
-      var(--su-shadow-elevation-blur-2) var(--su-shadow-elevation-color-2);
-  }
-  &-3,
-  &-high {
-    text-shadow: var(--su-shadow-elevation-offset-0) var(--su-shadow-elevation-offset-3)
-      var(--su-shadow-elevation-blur-3) var(--su-shadow-elevation-color-3);
-  }
-  &-4,
-  &-highest {
-    text-shadow: var(--su-shadow-elevation-offset-0) var(--su-shadow-elevation-offset-4)
-      var(--su-shadow-elevation-blur-4) var(--su-shadow-elevation-color-4);
-  }
-  &-right-bottom {
-    text-shadow: var(--su-shadow-elevation-offset-2) var(--su-shadow-elevation-offset-2)
-      var(--su-shadow-elevation-blur-2) var(--su-shadow-elevation-color-2);
+  /* -------------------------------
+   *  dropshadow text
+   * ---------------------------- */
+  .su-shadow-text {
+    text-shadow: var(--su-shadow-elevation-offset-0) var(--su-shadow-elevation-offset-2) var(--su-shadow-elevation-blur-2)
+      var(--su-shadow-elevation-color-2);
+    &-0,
+    &-none {
+      text-shadow: var(--su-shadow-elevation-offset-0) var(--su-shadow-elevation-offset-0)
+        var(--su-shadow-elevation-blur-0) var(--su-shadow-elevation-color-0);
+    }
     &-1,
     &-low {
-      text-shadow: var(--su-shadow-elevation-offset-1) var(--su-shadow-elevation-offset-1)
+      text-shadow: var(--su-shadow-elevation-offset-0) var(--su-shadow-elevation-offset-1)
         var(--su-shadow-elevation-blur-1) var(--su-shadow-elevation-color-1);
     }
     &-2,
     &-medium {
+      text-shadow: var(--su-shadow-elevation-offset-0) var(--su-shadow-elevation-offset-2)
+        var(--su-shadow-elevation-blur-2) var(--su-shadow-elevation-color-2);
+    }
+    &-3,
+    &-high {
+      text-shadow: var(--su-shadow-elevation-offset-0) var(--su-shadow-elevation-offset-3)
+        var(--su-shadow-elevation-blur-3) var(--su-shadow-elevation-color-3);
+    }
+    &-4,
+    &-highest {
+      text-shadow: var(--su-shadow-elevation-offset-0) var(--su-shadow-elevation-offset-4)
+        var(--su-shadow-elevation-blur-4) var(--su-shadow-elevation-color-4);
+    }
+    &-right-bottom {
       text-shadow: var(--su-shadow-elevation-offset-2) var(--su-shadow-elevation-offset-2)
         var(--su-shadow-elevation-blur-2) var(--su-shadow-elevation-color-2);
+      &-1,
+      &-low {
+        text-shadow: var(--su-shadow-elevation-offset-1) var(--su-shadow-elevation-offset-1)
+          var(--su-shadow-elevation-blur-1) var(--su-shadow-elevation-color-1);
+      }
+      &-2,
+      &-medium {
+        text-shadow: var(--su-shadow-elevation-offset-2) var(--su-shadow-elevation-offset-2)
+          var(--su-shadow-elevation-blur-2) var(--su-shadow-elevation-color-2);
+      }
+      &-3,
+      &-high {
+        text-shadow: var(--su-shadow-elevation-offset-3) var(--su-shadow-elevation-offset-3)
+          var(--su-shadow-elevation-blur-3) var(--su-shadow-elevation-color-3);
+      }
+      &-4,
+      &-highest {
+        text-shadow: var(--su-shadow-elevation-offset-4) var(--su-shadow-elevation-offset-4)
+          var(--su-shadow-elevation-blur-4) var(--su-shadow-elevation-color-4);
+      }
     }
-    &-3,
-    &-high {
-      text-shadow: var(--su-shadow-elevation-offset-3) var(--su-shadow-elevation-offset-3)
-        var(--su-shadow-elevation-blur-3) var(--su-shadow-elevation-color-3);
-    }
-    &-4,
-    &-highest {
-      text-shadow: var(--su-shadow-elevation-offset-4) var(--su-shadow-elevation-offset-4)
-        var(--su-shadow-elevation-blur-4) var(--su-shadow-elevation-color-4);
-    }
-  }
-  &-left-bottom {
-    text-shadow: calc(var(--su-shadow-elevation-offset-2) * -1) var(--su-shadow-elevation-offset-2)
-      var(--su-shadow-elevation-blur-2) var(--su-shadow-elevation-color-2);
-    &-1,
-    &-low {
-      text-shadow: calc(var(--su-shadow-elevation-offset-1) * -1) var(--su-shadow-elevation-offset-1)
-        var(--su-shadow-elevation-blur-1) var(--su-shadow-elevation-color-1);
-    }
-    &-2,
-    &-medium {
+    &-left-bottom {
       text-shadow: calc(var(--su-shadow-elevation-offset-2) * -1) var(--su-shadow-elevation-offset-2)
         var(--su-shadow-elevation-blur-2) var(--su-shadow-elevation-color-2);
-    }
-    &-3,
-    &-high {
-      text-shadow: calc(var(--su-shadow-elevation-offset-3) * -1) var(--su-shadow-elevation-offset-3)
-        var(--su-shadow-elevation-blur-3) var(--su-shadow-elevation-color-3);
-    }
-    &-4,
-    &-highest {
-      text-shadow: calc(var(--su-shadow-elevation-offset-4) * -1) var(--su-shadow-elevation-offset-4)
-        var(--su-shadow-elevation-blur-4) var(--su-shadow-elevation-color-4);
+      &-1,
+      &-low {
+        text-shadow: calc(var(--su-shadow-elevation-offset-1) * -1) var(--su-shadow-elevation-offset-1)
+          var(--su-shadow-elevation-blur-1) var(--su-shadow-elevation-color-1);
+      }
+      &-2,
+      &-medium {
+        text-shadow: calc(var(--su-shadow-elevation-offset-2) * -1) var(--su-shadow-elevation-offset-2)
+          var(--su-shadow-elevation-blur-2) var(--su-shadow-elevation-color-2);
+      }
+      &-3,
+      &-high {
+        text-shadow: calc(var(--su-shadow-elevation-offset-3) * -1) var(--su-shadow-elevation-offset-3)
+          var(--su-shadow-elevation-blur-3) var(--su-shadow-elevation-color-3);
+      }
+      &-4,
+      &-highest {
+        text-shadow: calc(var(--su-shadow-elevation-offset-4) * -1) var(--su-shadow-elevation-offset-4)
+          var(--su-shadow-elevation-blur-4) var(--su-shadow-elevation-color-4);
+      }
     }
   }
+
 }

@@ -1,11 +1,15 @@
 @use '../../foundation/import' as *;
 
-/* -------------------------------
- *  background pattern
- * ---------------------------- */
-.su-pattern-grid {
-  background-image: linear-gradient(90deg, var(--su-gray-color__mono--1) 4.1666%, transparent 4.1666%),
-    linear-gradient(0deg, var(--su-gray-color__mono--1) 4.1666%, transparent 4.1666%);
-  background-size: var(--su-size-2l) var(--su-size-2l);
-  background-repeat: repeat;
+@layer utility {
+
+  /* -------------------------------
+   *  background pattern
+   * ---------------------------- */
+  .su-pattern-grid {
+    background-image: linear-gradient(90deg, var(--su-gray-color__mono--1) 4.1666%, transparent 4.1666%),
+      linear-gradient(0deg, var(--su-gray-color__mono--1) 4.1666%, transparent 4.1666%);
+    background-size: var(--su-size-2l) var(--su-size-2l);
+    background-repeat: repeat;
+  }
+
 }

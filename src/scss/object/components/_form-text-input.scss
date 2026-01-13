@@ -13,119 +13,123 @@
   --su-max-row-text-area: 8;
 }
 
-/* -------------------------------
- *  text input (single)
- * ---------------------------- */
-.su-form-text-input {
-  border: 1px solid var(--su-color-border-text-input);
-  border-radius: var(--su-size-radius-text-input);
-  padding: 0.5em 1em;
-  color: var(--su-color-text-text-input);
-  max-width: 100%;
-  display: inline-block;
-  &:has(input:focus-visible) {
-    outline: 1px solid var(--su-color-border-text-input);
-  }
-  input {
-    font-size: inherit;
+@layer component {
+
+  /* -------------------------------
+   *  text input (single)
+   * ---------------------------- */
+  .su-form-text-input {
+    border: 1px solid var(--su-color-border-text-input);
+    border-radius: var(--su-size-radius-text-input);
+    padding: 0.5em 1em;
+    color: var(--su-color-text-text-input);
     max-width: 100%;
+    display: inline-block;
+    &:has(input:focus-visible) {
+      outline: 1px solid var(--su-color-border-text-input);
+    }
+    input {
+      font-size: inherit;
+      max-width: 100%;
+      &:focus-visible {
+        outline: none;
+      }
+      &::placeholder {
+        color: var(--su-color-placeholder-text-input);
+      }
+      // default ui hidden
+      &::-webkit-inner-spin-button {
+        display: none;
+      }
+      &::-webkit-calendar-picker-indicator {
+        display: none;
+      }
+    }
+    // default ui show
+    &.su-form-text-input-show-ui {
+      input {
+        &::-webkit-inner-spin-button {
+          display: inline-block;
+        }
+        &::-webkit-calendar-picker-indicator {
+          display: inline-block;
+        }
+      }
+    }
+    &.su-form-text-input-add-icon {
+      &-email,
+      &-tel,
+      &-url,
+      &-date,
+      &-time,
+      &-password {
+        padding: 0.5em 1em 0.5em 2.75em;
+        position: relative;
+        &::before {
+          position: absolute;
+          left: 0.5em;
+          top: calc(50% - 0.5lh);
+          width: 1lh;
+          height: 1lh;
+          font-family: 'startify-ui icons';
+          color: var(--su-color-icon-text-input);
+          line-height: 1;
+          font-size: calc(1em * 1.44);
+        }
+      }
+      &-email {
+        &::before {
+          content: '\e907';
+        }
+      }
+      &-tel {
+        &::before {
+          content: '\e90c';
+        }
+      }
+      &-url {
+        &::before {
+          content: '\e90a';
+        }
+      }
+      &-date {
+        &::before {
+          content: '\e903';
+        }
+      }
+      &-time {
+        &::before {
+          content: '\e910';
+        }
+      }
+      &-password {
+        &::before {
+          content: '\e90b';
+        }
+      }
+    }
+  }
+
+  /* -------------------------------
+   *  text input (mulch-line)
+   * ---------------------------- */
+  .su-form-text-area {
+    border: 1px solid var(--su-color-border-text-input);
+    border-radius: var(--su-size-radius-text-input);
+    padding: 0.5em 1em;
+    color: var(--su-color-text-text-input);
+    max-width: 100%;
+    display: inline-block;
+    field-sizing: content;
+    min-height: calc(var(--su-min-row-text-area) * 1lh);
+    max-height: calc(var(--su-max-row-text-area) * 1lh);
+    resize: vertical;
     &:focus-visible {
-      outline: none;
+      outline: 1px solid var(--su-color-border-text-input);
     }
     &::placeholder {
       color: var(--su-color-placeholder-text-input);
     }
-    // default ui hidden
-    &::-webkit-inner-spin-button {
-      display: none;
-    }
-    &::-webkit-calendar-picker-indicator {
-      display: none;
-    }
   }
-  // default ui show
-  &.su-form-text-input-show-ui {
-    input {
-      &::-webkit-inner-spin-button {
-        display: inline-block;
-      }
-      &::-webkit-calendar-picker-indicator {
-        display: inline-block;
-      }
-    }
-  }
-  &.su-form-text-input-add-icon {
-    &-email,
-    &-tel,
-    &-url,
-    &-date,
-    &-time,
-    &-password {
-      padding: 0.5em 1em 0.5em 2.75em;
-      position: relative;
-      &::before {
-        position: absolute;
-        left: 0.5em;
-        top: calc(50% - 0.5lh);
-        width: 1lh;
-        height: 1lh;
-        font-family: 'startify-ui icons';
-        color: var(--su-color-icon-text-input);
-        line-height: 1;
-        font-size: calc(1em * 1.44);
-      }
-    }
-    &-email {
-      &::before {
-        content: '\e907';
-      }
-    }
-    &-tel {
-      &::before {
-        content: '\e90c';
-      }
-    }
-    &-url {
-      &::before {
-        content: '\e90a';
-      }
-    }
-    &-date {
-      &::before {
-        content: '\e903';
-      }
-    }
-    &-time {
-      &::before {
-        content: '\e910';
-      }
-    }
-    &-password {
-      &::before {
-        content: '\e90b';
-      }
-    }
-  }
-}
 
-/* -------------------------------
- *  text input (mulch)
- * ---------------------------- */
-.su-form-text-area {
-  border: 1px solid var(--su-color-border-text-input);
-  border-radius: var(--su-size-radius-text-input);
-  padding: 0.5em 1em;
-  color: var(--su-color-text-text-input);
-  max-width: 100%;
-  display: inline-block;
-  field-sizing: content;
-  min-height: calc(var(--su-min-row-text-area) * 1lh);
-  max-height: calc(var(--su-max-row-text-area) * 1lh);
-  resize: vertical;
-  &:focus-visible {
-    outline: 1px solid var(--su-color-border-text-input);
-  }
-  &::placeholder {
-    color: var(--su-color-placeholder-text-input);
-  }
 }

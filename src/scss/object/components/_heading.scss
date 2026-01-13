@@ -1,82 +1,86 @@
 @use '../../foundation/import' as *;
 
-/* -------------------------------
- *  heading
- * ---------------------------- */
-.su-title {
-  font-size: var(--su-size-6l);
-  font-weight: var(--su-font-bold);
-  line-height: 1.2;
-  @include media-query(mobile-l) {
+@layer component {
+
+  /* -------------------------------
+   *  title & heading
+   * ---------------------------- */
+  .su-title {
+    font-size: var(--su-size-6l);
+    font-weight: var(--su-font-bold);
+    line-height: 1.2;
+    @include media-query(mobile-l) {
+      font-size: var(--su-size-5l);
+      line-height: 1.4;
+    }
+  }
+  .su-heading-1 {
     font-size: var(--su-size-5l);
+    font-weight: var(--su-font-bold);
     line-height: 1.4;
+    @include media-query(mobile-l) {
+      font-size: var(--su-size-4l);
+      line-height: 1.5;
+    }
   }
-}
-.su-heading-1 {
-  font-size: var(--su-size-5l);
-  font-weight: var(--su-font-bold);
-  line-height: 1.4;
-  @include media-query(mobile-l) {
+  .su-heading-2 {
     font-size: var(--su-size-4l);
+    font-weight: var(--su-font-bold);
     line-height: 1.5;
+    @include media-query(mobile-l) {
+      font-size: var(--su-size-3l);
+      line-height: 1.6;
+    }
   }
-}
-.su-heading-2 {
-  font-size: var(--su-size-4l);
-  font-weight: var(--su-font-bold);
-  line-height: 1.5;
-  @include media-query(mobile-l) {
+  .su-heading-3 {
     font-size: var(--su-size-3l);
+    font-weight: var(--su-font-bold);
     line-height: 1.6;
+    @include media-query(mobile-l) {
+      font-size: var(--su-size-2l);
+      line-height: 1.75;
+    }
   }
-}
-.su-heading-3 {
-  font-size: var(--su-size-3l);
-  font-weight: var(--su-font-bold);
-  line-height: 1.6;
-  @include media-query(mobile-l) {
+  .su-heading-4 {
     font-size: var(--su-size-2l);
+    font-weight: var(--su-font-bold);
     line-height: 1.75;
+    @include media-query(mobile-l) {
+      font-size: var(--su-size-l);
+      line-height: 1.8;
+    }
   }
-}
-.su-heading-4 {
-  font-size: var(--su-size-2l);
-  font-weight: var(--su-font-bold);
-  line-height: 1.75;
-  @include media-query(mobile-l) {
+  .su-heading-5 {
     font-size: var(--su-size-l);
+    font-weight: var(--su-font-bold);
     line-height: 1.8;
+    @include media-query(mobile-l) {
+      font-size: var(--su-size-m);
+    }
   }
-}
-.su-heading-5 {
-  font-size: var(--su-size-l);
-  font-weight: var(--su-font-bold);
-  line-height: 1.8;
-  @include media-query(mobile-l) {
+  .su-heading-6 {
     font-size: var(--su-size-m);
+    font-weight: var(--su-font-bold);
+    line-height: 1.8;
+    @include media-query(mobile-l) {
+      font-size: var(--su-size-r);
+      line-height: 2;
+    }
   }
-}
-.su-heading-6 {
-  font-size: var(--su-size-m);
-  font-weight: var(--su-font-bold);
-  line-height: 1.8;
-  @include media-query(mobile-l) {
-    font-size: var(--su-size-r);
-    line-height: 2;
+  .su-title,
+  .su-heading-1,
+  .su-heading-2,
+  .su-heading-3,
+  .su-heading-4,
+  .su-heading-5,
+  .su-heading-6 {
+    margin-block: 1em;
+    &:first-child {
+      margin-block-start: 0;
+    }
   }
-}
-.su-title,
-.su-heading-1,
-.su-heading-2,
-.su-heading-3,
-.su-heading-4,
-.su-heading-5,
-.su-heading-6 {
-  margin-block: 1em;
-  &:first-child {
-    margin-block-start: 0;
+  hgroup > .su-title {
+    margin-block-end: 0;
   }
-}
-hgroup > .su-title {
-  margin-block-end: 0;
+
 }

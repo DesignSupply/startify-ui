@@ -1,0 +1,34 @@
+@layer layout {
+
+  /* -------------------------------
+   *  automatic adjusting grid
+   * ---------------------------- */
+  .su-auto-grid {
+    --su-auto-grid-gap-column: var(--su-size-2l);
+    --su-auto-grid-gap-row: var(--su-size-2l);
+    --su-auto-grid-adjust-column-count: 12; // 調整用カラム数（minが0、maxが100%の時のカラム数、上限下限の値により実際のカラム数と異なる）
+    --su-auto-grid-min-column-width: 200px; // 最小カラムサイズ
+    --su-auto-grid-max-column-width: 600px; // 最大カラムサイズ
+    --su-auto-grid-repeat-type: auto-fit; // auto-fill or auto-fit
+    display: grid;
+    grid-template-columns: repeat(
+      var(--su-auto-grid-repeat-type), 
+      minmax(
+        clamp(
+          var(--su-auto-grid-min-column-width),
+          calc(
+            (
+              100% - 
+              (var(--su-auto-grid-gap-column) * (var(--su-auto-grid-adjust-column-count) - 1))
+            ) /
+            var(--su-auto-grid-adjust-column-count)
+          ),
+          var(--su-auto-grid-max-column-width)
+        ),
+        1fr
+      ),
+    );
+    gap: var(--su-auto-grid-gap-column) var(--su-auto-grid-gap-row);
+  }
+
+}

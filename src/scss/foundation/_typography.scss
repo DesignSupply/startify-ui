@@ -9,14 +9,32 @@ $font-sans:
   'Helvetica',
   'Hiragino Sans',
   'Hiragino Kaku Gothic ProN',
+  'Noto Sans JP',
   Arial,
   'Yu Gothic Medium',
   'Yu Gothic',
   YuGothic,
   Meiryo,
   sans-serif !default;
-$font-serif: ui-serif, 'Times New Roman', YuMincho, 'Yu Mincho', 'Hiragino Mincho ProN', 'MS PMincho', serif !default;
-$font-monospace: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Roboto Mono', 'Courier New', Courier, Meiryo,
+$font-serif: 
+  ui-serif, 
+  'Times New Roman', 
+  'Noto Serif JP',
+  YuMincho, 
+  'Yu Mincho', 
+  'Hiragino Mincho ProN', 
+  'MS PMincho', 
+  serif !default;
+$font-monospace: 
+  ui-monospace, 
+  SFMono-Regular, 
+  Menlo, 
+  Monaco, 
+  Consolas, 
+  'Roboto Mono', 
+  'Courier New', 
+  Courier, 
+  Meiryo,
   monospace !default;
 $font-thin: 100 !default;
 $font-extra-light: 200 !default;

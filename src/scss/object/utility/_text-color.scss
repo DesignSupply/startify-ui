@@ -1,94 +1,98 @@
-/* -------------------------------
- *  text color
- * ---------------------------- */
-.su-text-red {
-  color: var(--su-palette-color__red--5);
-}
-.su-text-orange {
-  color: var(--su-palette-color__orange--5);
-}
-.su-text-orange-yellow {
-  color: var(--su-palette-color__orange-yellow--5);
-}
-.su-text-yellow {
-  color: var(--su-palette-color__yellow--5);
-}
-.su-text-yellow-green {
-  color: var(--su-palette-color__yellow-green--5);
-}
-.su-text-green {
-  color: var(--su-palette-color__yellow-green--5);
-}
-.su-text-teal {
-  color: var(--su-palette-color__teal--5);
-}
-.su-text-cyan {
-  color: var(--su-palette-color__cyan--5);
-}
-.su-text-light-blue {
-  color: var(--su-palette-color__light-blue--5);
-}
-.su-text-blue {
-  color: var(--su-palette-color__blue--5);
-}
-.su-text-blue-violet {
-  color: var(--su-palette-color__blue-violet--5);
-}
-.su-text-violet {
-  color: var(--su-palette-color__violet--5);
-}
-.su-text-purple {
-  color: var(--su-palette-color__purple--5);
-}
-.su-text-magenta {
-  color: var(--su-palette-color__magenta--5);
-}
-.su-text-pink {
-  color: var(--su-palette-color__pink--5);
-}
-.su-text-pink-red {
-  color: var(--su-palette-color__pink-red--5);
-}
-.su-text-gray-cool {
-  color: var(--su-gray-color__cool--5);
-}
-.su-text-gray-warm {
-  color: var(--su-gray-color__warm--5);
-}
-.su-text-gray-mono {
-  color: var(--su-gray-color__mono--5);
-}
-.su-text-white,
-.su-text-pure-white {
-  color: var(--su-color-white);
-}
-.su-text-pure-black {
-  color: var(--su-color-black);
-}
-.su-text-error {
-  color: var(--su-status-color__error--5);
-}
-.su-text-warning {
-  color: var(--su-status-color__warning--5);
-}
-.su-text-success {
-  color: var(--su-status-color__success--5);
-}
-.su-text-info {
-  color: var(--su-status-color__info--5);
-}
-.su-text-negative {
-  color: var(--su-status-color__negative--5);
-}
-.su-text-base {
-  color: var(--su-theme-color__base--5);
-}
-.su-text-primary {
-  color: var(--su-theme-color__primary--5);
-}
-.su-text-secondary {
-  color: var(--su-theme-color__secondary--5);
-}
-.su-text-accent {
-  color: var(--su-theme-color__accent--5);
+@layer utility {
+
+  /* -------------------------------
+   *  text color
+   * ---------------------------- */
+  .su-text-red {
+    color: var(--su-palette-color__red--5);
+  }
+  .su-text-orange {
+    color: var(--su-palette-color__orange--5);
+  }
+  .su-text-orange-yellow {
+    color: var(--su-palette-color__orange-yellow--5);
+  }
+  .su-text-yellow {
+    color: var(--su-palette-color__yellow--5);
+  }
+  .su-text-yellow-green {
+    color: var(--su-palette-color__yellow-green--5);
+  }
+  .su-text-green {
+    color: var(--su-palette-color__yellow-green--5);
+  }
+  .su-text-teal {
+    color: var(--su-palette-color__teal--5);
+  }
+  .su-text-cyan {
+    color: var(--su-palette-color__cyan--5);
+  }
+  .su-text-light-blue {
+    color: var(--su-palette-color__light-blue--5);
+  }
+  .su-text-blue {
+    color: var(--su-palette-color__blue--5);
+  }
+  .su-text-blue-violet {
+    color: var(--su-palette-color__blue-violet--5);
+  }
+  .su-text-violet {
+    color: var(--su-palette-color__violet--5);
+  }
+  .su-text-purple {
+    color: var(--su-palette-color__purple--5);
+  }
+  .su-text-magenta {
+    color: var(--su-palette-color__magenta--5);
+  }
+  .su-text-pink {
+    color: var(--su-palette-color__pink--5);
+  }
+  .su-text-pink-red {
+    color: var(--su-palette-color__pink-red--5);
+  }
+  .su-text-gray-cool {
+    color: var(--su-gray-color__cool--5);
+  }
+  .su-text-gray-warm {
+    color: var(--su-gray-color__warm--5);
+  }
+  .su-text-gray-mono {
+    color: var(--su-gray-color__mono--5);
+  }
+  .su-text-white,
+  .su-text-pure-white {
+    color: var(--su-color-white);
+  }
+  .su-text-pure-black {
+    color: var(--su-color-black);
+  }
+  .su-text-error {
+    color: var(--su-status-color__error--5);
+  }
+  .su-text-warning {
+    color: var(--su-status-color__warning--5);
+  }
+  .su-text-success {
+    color: var(--su-status-color__success--5);
+  }
+  .su-text-info {
+    color: var(--su-status-color__info--5);
+  }
+  .su-text-negative {
+    color: var(--su-status-color__negative--5);
+  }
+  .su-text-base {
+    color: var(--su-theme-color__base--5);
+  }
+  .su-text-primary {
+    color: var(--su-theme-color__primary--5);
+  }
+  .su-text-secondary {
+    color: var(--su-theme-color__secondary--5);
+  }
+  .su-text-accent {
+    color: var(--su-theme-color__accent--5);
+  }
+
 }
