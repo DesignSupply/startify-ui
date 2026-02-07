@@ -1,3 +1,5 @@
+@use 'media-query' as *;
+
 /* -------------------------------
  *  absolute sizing
  * ---------------------------- */
@@ -42,6 +44,17 @@ $size-auto: auto !default;
 $size-content: fit-content !default;
 $size-screen-w: 100vw !default;
 $size-screen-h: 100dvh !default;
+
+/* -------------------------------
+ *  viewport relative sizing
+ * ---------------------------- */
+$size-viewport-base-width-desktop-l: #{$screen-desktop-l} !default;
+$size-viewport-base-width-desktop-m: #{$screen-desktop-m} !default;
+$size-viewport-base-width-desktop-s: #{$screen-desktop-s} !default;
+$size-viewport-base-width-mobile-l: #{$screen-mobile-l} !default;
+$size-viewport-base-width-mobile-m: #{$screen-mobile-m} !default;
+$size-viewport-base-width-mobile-s: #{$screen-mobile-s} !default;
+$size-viewport-base-width-default: $size-viewport-base-width-desktop-l !default;
 
 /* -------------------------------
  *  layer order
@@ -120,6 +133,9 @@ $shadow-elevation-color-4: rgb(0 0 0 / 0.2) !default;
   --su-size-content: #{$size-content};
   --su-size-screen-w: #{$size-screen-w};
   --su-size-screen-h: #{$size-screen-h};
+  // viewport relative sizing
+  --su-size-viewport-base-width: #{$size-viewport-base-width-default};
+  --su-size-viewport-scale-unit: calc(100vw / var(--su-size-viewport-base-width));
   // shadow elevation
   --su-shadow-elevation-offset-0: #{$shadow-elevation-offset-0};
   --su-shadow-elevation-offset-1: #{$shadow-elevation-offset-1};
